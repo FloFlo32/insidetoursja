@@ -33,30 +33,30 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-300",
+        "sticky top-0 z-50 w-full bg-[oklch(0.16_0.018_150)] transition-all duration-300",
         scrolled
-          ? "border-b border-border/70 bg-background/85 backdrop-blur-xl shadow-sm"
-          : "border-b border-transparent bg-background/40 backdrop-blur-sm"
+          ? "border-b border-white/10 shadow-lg shadow-black/20"
+          : "border-b border-transparent"
       )}
     >
-      <nav className="container-px mx-auto flex h-20 max-w-7xl items-center justify-between gap-4">
+      <nav className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between gap-3">
         <Link href="/" className="flex shrink-0 items-center gap-2.5">
-          <span className="relative block size-12 overflow-hidden rounded-xl bg-white ring-1 ring-border">
+          <span className="relative block size-11 overflow-hidden rounded-lg bg-white ring-1 ring-white/15">
             <Image
               src="/logo.webp"
               alt={brand.name}
               fill
-              sizes="48px"
+              sizes="44px"
               priority
               className="object-contain p-1"
             />
           </span>
-          <span className="hidden font-display text-lg font-bold leading-tight tracking-tight sm:block">
+          <span className="hidden font-display text-base font-bold leading-tight tracking-tight text-white sm:block">
             {brand.name}
           </span>
         </Link>
 
-        <div className="hidden items-center gap-1 lg:flex">
+        <div className="hidden items-center gap-0.5 xl:flex">
           {navItems.map((item) =>
             item.children ? (
               <div
@@ -68,10 +68,10 @@ export function Navbar() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium transition-colors cursor-pointer",
+                    "flex items-center gap-1 rounded-full px-3.5 py-2 text-sm font-medium transition-colors cursor-pointer",
                     isActive(item.href)
-                      ? "bg-primary/10 text-primary"
-                      : "text-foreground/75 hover:bg-accent hover:text-foreground"
+                      ? "bg-primary text-primary-foreground"
+                      : "text-white/65 hover:bg-white/10 hover:text-white"
                   )}
                 >
                   {item.label}
@@ -85,12 +85,12 @@ export function Navbar() {
                       : "pointer-events-none -translate-y-1 opacity-0"
                   )}
                 >
-                  <div className="overflow-hidden rounded-2xl border border-border bg-card p-2 shadow-lg shadow-black/5">
+                  <div className="overflow-hidden rounded-2xl border border-white/10 bg-[oklch(0.19_0.02_150)] p-2 shadow-xl shadow-black/30">
                     {item.children.map((c) => (
                       <Link
                         key={c.href}
                         href={c.href}
-                        className="block rounded-xl px-3.5 py-2.5 text-sm font-medium text-foreground/80 transition-colors hover:bg-accent hover:text-foreground"
+                        className="block rounded-xl px-3.5 py-2.5 text-sm font-medium text-white/75 transition-colors hover:bg-white/10 hover:text-white"
                       >
                         {c.label}
                       </Link>
@@ -103,10 +103,10 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "rounded-full px-4 py-2 text-sm font-medium transition-colors",
+                  "rounded-full px-3.5 py-2 text-sm font-medium transition-colors",
                   isActive(item.href)
-                    ? "bg-primary/10 text-primary"
-                    : "text-foreground/75 hover:bg-accent hover:text-foreground"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-white/65 hover:bg-white/10 hover:text-white"
                 )}
               >
                 {item.label}
@@ -116,20 +116,13 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
-          <a
-            href={`tel:${brand.contact.phone}`}
-            className="hidden items-center gap-2 rounded-full border border-border px-3.5 py-2 text-sm font-medium text-foreground/80 transition-colors hover:border-primary/40 hover:text-foreground xl:flex"
-          >
-            <Phone className="size-4 text-primary" />
-            {formatPhone(brand.contact.phone)}
-          </a>
           <Button asChild size="default" className="hidden sm:inline-flex">
             <Link href="/contact-us">Book Now</Link>
           </Button>
           <Button
-            variant="outline"
+            variant="ghost"
             size="icon"
-            className="lg:hidden"
+            className="text-white hover:bg-white/10 hover:text-white xl:hidden"
             aria-label="Toggle menu"
             onClick={() => setOpen((o) => !o)}
           >
@@ -139,25 +132,25 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-border/70 bg-background lg:hidden">
+        <div className="border-t border-white/10 bg-[oklch(0.16_0.018_150)] xl:hidden">
           <div className="container-px mx-auto flex max-w-7xl flex-col gap-1 py-4">
             {navItems.map((item) => (
               <div key={item.href}>
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-xl px-3.5 py-3 text-sm font-medium text-foreground/85 hover:bg-accent"
+                  className="block rounded-xl px-3.5 py-3 text-sm font-medium text-white/85 hover:bg-white/10"
                 >
                   {item.label}
                 </Link>
                 {item.children && (
-                  <div className="ml-3 flex flex-col border-l border-border pl-3">
+                  <div className="ml-3 flex flex-col border-l border-white/10 pl-3">
                     {item.children.map((c) => (
                       <Link
                         key={c.href}
                         href={c.href}
                         onClick={() => setOpen(false)}
-                        className="rounded-lg px-3 py-2.5 text-sm text-muted-foreground hover:bg-accent hover:text-foreground"
+                        className="rounded-lg px-3 py-2.5 text-sm text-white/60 hover:bg-white/10 hover:text-white"
                       >
                         {c.label}
                       </Link>
@@ -166,7 +159,14 @@ export function Navbar() {
                 )}
               </div>
             ))}
-            <Button asChild className="mt-3">
+            <a
+              href={`tel:${brand.contact.phone}`}
+              className="mt-2 flex items-center gap-2 rounded-xl px-3.5 py-3 text-sm font-medium text-white/85 hover:bg-white/10"
+            >
+              <Phone className="size-4 text-primary" />
+              {formatPhone(brand.contact.phone)}
+            </a>
+            <Button asChild className="mt-2">
               <Link href="/contact-us" onClick={() => setOpen(false)}>
                 Book Now
               </Link>
