@@ -1,33 +1,38 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { brand } from "@/brand.config";
 import { Button } from "@/components/ui/button";
-import { GitHubIcon } from "@/components/icons";
 import { GridPattern } from "@/components/magic/grid-pattern";
 import { Reveal } from "@/components/magic/reveal";
+import { formatPhone } from "@/lib/format-phone";
 
 export function CTA() {
   return (
-    <section id="cta" className="container-px mx-auto max-w-6xl py-24">
+    <section id="cta" className="container-px mx-auto max-w-7xl py-20 sm:py-28">
       <Reveal>
-        <div className="relative overflow-hidden rounded-3xl border border-border bg-card px-6 py-20 text-center sm:px-12">
-          <GridPattern />
-          <h2 className="mx-auto max-w-2xl text-balance text-4xl font-bold sm:text-5xl">
-            Start your next site on <span className="text-primary">{brand.name}</span>
+        <div className="relative overflow-hidden rounded-3xl border border-primary/20 bg-primary px-6 py-16 text-center text-primary-foreground sm:px-12 sm:py-20">
+          <GridPattern className="opacity-10" />
+          <h2 className="relative mx-auto max-w-2xl text-balance text-4xl font-bold sm:text-5xl">
+            Sit back, relax, leave it up to us
           </h2>
-          <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
-            Clone it, name it, ship it. The last starter you&apos;ll set up by hand.
+          <p className="relative mx-auto mt-4 max-w-lg text-pretty text-primary-foreground/85">
+            We keep smiles coming all day. {brand.name}, it&apos;s more fun with us.
           </p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button asChild size="lg">
-              <Link href={`https://github.com/${brand.social.github}`}>
-                Get the starter <ArrowRight className="size-4" />
+          <div className="relative mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Button asChild size="lg" variant="secondary">
+              <Link href="/contact-us">
+                Book Now <ArrowRight className="size-4" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link href={`https://github.com/${brand.social.github}`}>
-                <GitHubIcon className="size-4" /> Star on GitHub
-              </Link>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+            >
+              <a href={`tel:${brand.contact.phone}`}>
+                <Phone className="size-4" /> {formatPhone(brand.contact.phone)}
+              </a>
             </Button>
           </div>
         </div>

@@ -1,95 +1,111 @@
 import Link from "next/link";
-import { Mail } from "lucide-react";
+import Image from "next/image";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { brand } from "@/brand.config";
-import { GitHubIcon, XIcon } from "@/components/icons";
-
-const cols = [
-  {
-    title: "Product",
-    links: [
-      { label: "Features", href: "#features" },
-      { label: "Why us", href: "#bento" },
-      { label: "Results", href: "#stats" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { label: "Get started", href: "#cta" },
-      { label: "Brand guide", href: "/brand-guide" },
-      { label: "Changelog", href: "#" },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { label: "About", href: "#" },
-      { label: "Privacy", href: "#" },
-      { label: "Terms", href: "#" },
-    ],
-  },
-];
+import { navItems } from "@/lib/nav-items";
+import { FacebookIcon, InstagramIcon } from "@/components/icons";
+import { formatPhone } from "@/lib/format-phone";
 
 export function Footer() {
+  const flatLinks = navItems.flatMap((item) => [item, ...(item.children ?? [])]);
+
   return (
-    <footer className="mt-auto border-t border-border/60">
-      <div className="container-px mx-auto grid max-w-6xl gap-10 py-14 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+    <footer className="mt-auto border-t border-border/70 bg-secondary/40">
+      <div className="container-px mx-auto grid max-w-7xl gap-10 py-16 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
-          <Link href="/" className="flex items-center gap-2 font-display text-lg font-bold">
-            <span className="grid size-8 place-items-center rounded-lg bg-primary text-primary-foreground">
-              {brand.name.charAt(0)}
+          <Link href="/" className="flex items-center gap-2.5">
+            <span className="relative block size-12 overflow-hidden rounded-xl bg-white ring-1 ring-border">
+              <Image src="/logo.webp" alt={brand.name} fill sizes="48px" className="object-contain p-1" />
             </span>
-            {brand.name}
+            <span className="font-display text-lg font-bold tracking-tight">{brand.name}</span>
           </Link>
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-            {brand.tagline}
+            Providing safe fun tours in all of Jamaica. Taking you to hidden local gems, sites,
+            beaches, and restaurants. The real Jamaican experience. Let&apos;s tour!
           </p>
           <div className="mt-5 flex gap-2">
-            <Link
-              href={`https://github.com/${brand.social.github}`}
-              aria-label="GitHub"
-              className="grid size-9 place-items-center rounded-lg border border-border/60 text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
+            <a
+              href="https://www.facebook.com/insidetourja"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="grid size-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
             >
-              <GitHubIcon className="size-4" />
-            </Link>
-            <Link
-              href={`https://x.com/${brand.social.x}`}
-              aria-label="X"
-              className="grid size-9 place-items-center rounded-lg border border-border/60 text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
+              <FacebookIcon className="size-4" />
+            </a>
+            <a
+              href={brand.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="grid size-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
             >
-              <XIcon className="size-4" />
-            </Link>
-            <Link
-              href={`mailto:${brand.social.email}`}
-              aria-label="Email"
-              className="grid size-9 place-items-center rounded-lg border border-border/60 text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
-            >
-              <Mail className="size-4" />
-            </Link>
+              <InstagramIcon className="size-4" />
+            </a>
           </div>
         </div>
 
-        {cols.map((col) => (
-          <div key={col.title}>
-            <h4 className="font-display text-sm font-semibold">{col.title}</h4>
-            <ul className="mt-4 space-y-2.5">
-              {col.links.map((l) => (
-                <li key={l.label}>
-                  <Link
-                    href={l.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <div>
+          <h4 className="font-display text-sm font-semibold">Explore</h4>
+          <ul className="mt-4 space-y-2.5">
+            {flatLinks.slice(0, 7).map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="font-display text-sm font-semibold">More</h4>
+          <ul className="mt-4 space-y-2.5">
+            {flatLinks.slice(7).map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="font-display text-sm font-semibold">Get in touch</h4>
+          <ul className="mt-4 space-y-3">
+            <li>
+              <a
+                href={`tel:${brand.contact.phone}`}
+                className="flex items-start gap-2.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                <Phone className="mt-0.5 size-4 shrink-0 text-primary" />
+                {formatPhone(brand.contact.phone)}
+              </a>
+            </li>
+            <li>
+              <a
+                href={`mailto:${brand.social.email}`}
+                className="flex items-start gap-2.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                <Mail className="mt-0.5 size-4 shrink-0 text-primary" />
+                {brand.social.email}
+              </a>
+            </li>
+            <li className="flex items-start gap-2.5 text-sm text-muted-foreground">
+              <MapPin className="mt-0.5 size-4 shrink-0 text-primary" />
+              {brand.contact.address}
+            </li>
+            <li className="flex items-start gap-2.5 text-sm text-muted-foreground">
+              <Clock className="mt-0.5 size-4 shrink-0 text-primary" />
+              Open every day, 8am - 9pm
+            </li>
+          </ul>
+        </div>
       </div>
-      <div className="border-t border-border/60 py-6">
-        <p className="container-px mx-auto max-w-6xl text-sm text-muted-foreground">
-          © {brand.name}. Built on the {brand.name} starter pack.
+      <div className="border-t border-border/70 py-6">
+        <p className="container-px mx-auto max-w-7xl text-sm text-muted-foreground">
+          © 2026 {brand.name}. It&apos;s more fun with us.
         </p>
       </div>
     </footer>

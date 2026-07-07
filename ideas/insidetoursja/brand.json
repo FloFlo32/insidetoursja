@@ -1,0 +1,212 @@
+{
+  "source": "https://insidetoursja.com/",
+  "ingestedFromHost": "insidetoursja.com",
+  "pagesCrawled": 9,
+  "name": "Inside Tours Jamaica",
+  "tagline": "Inside Tours Jamaica | It’s more fun with us",
+  "description": "",
+  "domain": "insidetoursja.com",
+  "brandColor": {
+    "hex": "#2ea3f2",
+    "src": "css-frequency",
+    "oklchHue": 244
+  },
+  "theme": {
+    "hue": 244
+  },
+  "fonts": [],
+  "logo": "assets/logo.webp",
+  "logoNote": null,
+  "favicon": "https://insidetoursja.com/undefined",
+  "images": [
+    "/ingested/insidetoursja/img-001.webp",
+    "/ingested/insidetoursja/img-002.webp",
+    "/ingested/insidetoursja/img-003.webp",
+    "/ingested/insidetoursja/img-006.webp",
+    "/ingested/insidetoursja/img-007.webp",
+    "/ingested/insidetoursja/img-008.webp",
+    "/ingested/insidetoursja/img-011.webp",
+    "/ingested/insidetoursja/img-012.webp",
+    "/ingested/insidetoursja/img-013.webp",
+    "/ingested/insidetoursja/img-014.webp",
+    "/ingested/insidetoursja/img-015.webp",
+    "/ingested/insidetoursja/img-016.webp",
+    "/ingested/insidetoursja/img-021.webp",
+    "/ingested/insidetoursja/img-022.webp",
+    "/ingested/insidetoursja/img-023.webp",
+    "/ingested/insidetoursja/img-028.webp",
+    "/ingested/insidetoursja/img-029.webp",
+    "/ingested/insidetoursja/img-030.webp",
+    "/ingested/insidetoursja/img-031.webp",
+    "/ingested/insidetoursja/img-032.webp",
+    "/ingested/insidetoursja/img-033.webp",
+    "/ingested/insidetoursja/img-034.webp",
+    "/ingested/insidetoursja/img-035.webp",
+    "/ingested/insidetoursja/img-036.webp",
+    "/ingested/insidetoursja/img-037.webp",
+    "/ingested/insidetoursja/img-038.webp",
+    "/ingested/insidetoursja/img-039.webp",
+    "/ingested/insidetoursja/img-040.webp",
+    "/ingested/insidetoursja/img-041.webp",
+    "/ingested/insidetoursja/img-043.webp",
+    "/ingested/insidetoursja/img-044.webp",
+    "/ingested/insidetoursja/img-045.webp",
+    "/ingested/insidetoursja/img-046.webp",
+    "/ingested/insidetoursja/img-047.webp",
+    "/ingested/insidetoursja/img-048.webp",
+    "/ingested/insidetoursja/img-049.webp",
+    "/ingested/insidetoursja/img-050.webp",
+    "/ingested/insidetoursja/img-051.webp",
+    "/ingested/insidetoursja/img-052.webp",
+    "/ingested/insidetoursja/img-053.webp",
+    "/ingested/insidetoursja/img-055.webp",
+    "/ingested/insidetoursja/img-056.webp",
+    "/ingested/insidetoursja/img-057.webp",
+    "/ingested/insidetoursja/img-058.webp",
+    "/ingested/insidetoursja/img-059.webp",
+    "/ingested/insidetoursja/img-060.webp"
+  ],
+  "imageCount": 46,
+  "social": {
+    "email": "insidetoursjamaica@gmail.com",
+    "instagram": "https://www.instagram.com/insidetours.jamaica/?hl=en"
+  },
+  "whatsapp": null,
+  "phone": "+18765668156",
+  "location": null,
+  "sectionOrder": [
+    "Inside Tours Jamaica",
+    "Our Services",
+    "Treat Yourself",
+    "Relax. Enjoy.",
+    "About Us",
+    "Our Tour Packages",
+    "Airport Transfers Packages"
+  ],
+  "navItems": [
+    {
+      "text": "Home Services Airport Transfers MONTEGO BAY AIRPORT TRANSFERS KINGSTON AIRPORT TRANSFERS Tours & Excursions About Us Gallery Contact Us Select Page",
+      "url": "https://insidetoursja.com/undefined",
+      "path": "/undefined"
+    },
+    {
+      "text": "Services",
+      "url": "https://insidetoursja.com/services/",
+      "path": "/services"
+    },
+    {
+      "text": "Airport Transfers",
+      "url": "https://insidetoursja.com/airport-transfers/",
+      "path": "/airport-transfers"
+    },
+    {
+      "text": "MONTEGO BAY AIRPORT TRANSFERS",
+      "url": "https://insidetoursja.com/montego-bay-airport-transfers/",
+      "path": "/montego-bay-airport-transfers"
+    },
+    {
+      "text": "KINGSTON AIRPORT TRANSFERS",
+      "url": "https://insidetoursja.com/kingston-airport-transfers/",
+      "path": "/kingston-airport-transfers"
+    },
+    {
+      "text": "Tours & Excursions",
+      "url": "https://insidetoursja.com/tours-excursions/",
+      "path": "/tours-excursions"
+    },
+    {
+      "text": "About Us",
+      "url": "https://insidetoursja.com/about-us/",
+      "path": "/about-us"
+    },
+    {
+      "text": "Gallery",
+      "url": "https://insidetoursja.com/gallery/",
+      "path": "/gallery"
+    },
+    {
+      "text": "Contact Us",
+      "url": "https://insidetoursja.com/contact-us/",
+      "path": "/contact-us"
+    }
+  ],
+  "footerItems": [],
+  "innerPages": [
+    {
+      "path": "/services/",
+      "title": "Services | Inside Tours Jamaica",
+      "sections": [
+        "Our Services",
+        "What We Do",
+        "Customized Trip"
+      ]
+    },
+    {
+      "path": "/airport-transfers/",
+      "title": "Airport Transfers | Inside Tours Jamaica",
+      "sections": [
+        "Airport Transfers",
+        "Here’s the list…",
+        "Tours & Excursions"
+      ]
+    },
+    {
+      "path": "/montego-bay-airport-transfers/",
+      "title": "MONTEGO BAY AIRPORT TRANSFERS | Inside Tours Jamaica",
+      "sections": [
+        "MONTEGO BAY AIRPORT TRANSFERS",
+        "Book Now",
+        "Inquire/ Book Now",
+        "What includes in your trip",
+        "Plan a Visit"
+      ]
+    },
+    {
+      "path": "/kingston-airport-transfers/",
+      "title": "KINGSTON AIRPORT TRANSFERS | Inside Tours Jamaica",
+      "sections": [
+        "KINGSTON AIRPORT TRANSFERS",
+        "Book Now",
+        "Inquire/ Book Now",
+        "What includes in your trip",
+        "Plan a Visit"
+      ]
+    },
+    {
+      "path": "/tours-excursions/",
+      "title": "Tours & Excursions | Inside Tours Jamaica",
+      "sections": [
+        "Tours & Excursions",
+        "Here’s the list…",
+        "Airport Transfers"
+      ]
+    },
+    {
+      "path": "/about-us/",
+      "title": "About Us | Inside Tours Jamaica",
+      "sections": [
+        "About Us",
+        "Who We Are",
+        "What We Do"
+      ]
+    },
+    {
+      "path": "/gallery/",
+      "title": "Gallery | Inside Tours Jamaica",
+      "sections": [
+        "Highlights",
+        "Contact Us"
+      ]
+    },
+    {
+      "path": "/contact-us/",
+      "title": "Contact Us | Inside Tours Jamaica",
+      "sections": [
+        "Contact Us",
+        "Send Us a Message",
+        "Contact Us",
+        "Plan a Visit"
+      ]
+    }
+  ]
+}

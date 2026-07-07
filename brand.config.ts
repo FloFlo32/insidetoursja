@@ -20,43 +20,44 @@
 
 export const brand = {
   /** Product / company name. Shows in the nav, hero, footer, <title>, OG tags. */
-  name: "Aurora",
+  name: "Inside Tours Jamaica",
 
   /** One-line value prop. Used in the hero sub-headline + meta description. */
-  tagline: "The starter pack for shipping websites that don't look AI-built.",
+  tagline: "It's more fun with us",
 
   /** Longer description for SEO / Open Graph. ~150 chars is ideal. */
   description:
-    "A production-grade Next.js + Tailwind + shadcn starter with a real design system, motion, and one-command deploy to Vercel.",
+    "Providing safe, fun tours all over Jamaica: hidden local gems, beaches, waterfalls, and airport transfers. It's more fun with us.",
 
   /** Primary domain WITHOUT protocol. `/build` sets this to <project>.getyetti.com. */
-  domain: "aurora.getyetti.com",
+  domain: "insidetoursja.getyetti.com",
 
   /** Theme — drives the whole color system. Run `npm run brand` after editing. */
   theme: {
     /** Brand hue in OKLCH degrees (0–360). This single number re-skins the site. */
-    hue: 265,
+    hue: 150,
     /** Corner style. "sharp" = modern/editorial, "rounded" = friendly, "pill" = playful. */
     corners: "rounded" as "sharp" | "rounded" | "pill",
     /** Default color scheme on first paint. */
-    defaultScheme: "dark" as "light" | "dark",
+    defaultScheme: "light" as "light" | "dark",
   },
 
   /** Fonts. Any Google Font name works — edit, then run `npm run brand`. */
   fonts: {
     /** Big headlines. Pick something with PERSONALITY — this is what breaks the AI look. */
-    display: "Space Grotesk",
+    display: "Fraunces",
     /** Body / UI text. Keep it clean and readable. */
-    sans: "Geist",
+    sans: "Plus Jakarta Sans",
     /** Code / labels / kbd. */
     mono: "JetBrains Mono",
   },
 
   /** Links shown in the footer + used by deploy scripts. */
   social: {
-    github: "your-org/your-repo",
+    github: "FloFlo32/insidetoursja",
     x: "yourhandle",
-    email: "hello@aurora.example.com",
+    email: "insidetoursjamaica@gmail.com",
+    instagram: "https://www.instagram.com/insidetours.jamaica/?hl=en",
   },
 
   /**
@@ -67,9 +68,9 @@ export const brand = {
    */
   contact: {
     whatsapp: "",
-    phone: "",
-    address: "",
-    mapQuery: "",
+    phone: "+18765668156",
+    address: "Montego Bay, Jamaica",
+    mapQuery: "Montego Bay, Jamaica",
   },
 } as const;
 

@@ -1,80 +1,69 @@
 import Link from "next/link";
-import { ArrowRight, Palette, Zap, Rocket } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Phone } from "lucide-react";
 import { brand } from "@/brand.config";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { GridPattern } from "@/components/magic/grid-pattern";
-import { BorderBeam } from "@/components/magic/border-beam";
-import { AuroraBackground } from "@/components/magic/aurora-background";
 import { Reveal } from "@/components/magic/reveal";
-
-const previews = [
-  { icon: Palette, title: "Design system", body: "OKLCH tokens, one hue, full dark mode." },
-  { icon: Zap, title: "Motion built-in", body: "Reveals and beams, reduced-motion safe." },
-  { icon: Rocket, title: "One-command deploy", body: "GitHub + Vercel + domain from a script." },
-];
+import { formatPhone } from "@/lib/format-phone";
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <AuroraBackground />
-      <GridPattern />
+      <div className="container-px mx-auto grid max-w-7xl items-center gap-12 pb-16 pt-14 sm:pb-24 sm:pt-20 lg:grid-cols-2 lg:pt-24">
+        <div>
+          <Reveal>
+            <Badge variant="accent">Montego Bay &amp; all of Jamaica</Badge>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <h1 className="mt-6 max-w-xl text-balance text-5xl font-bold leading-[1.05] sm:text-6xl lg:text-7xl">
+              {brand.name}
+            </h1>
+          </Reveal>
+          <Reveal delay={0.14}>
+            <p className="mt-6 max-w-lg text-pretty text-lg text-muted-foreground">
+              Providing safe fun tours in all of Jamaica. Taking you to hidden local gems,
+              sites, beaches, and rest.
+            </p>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <Button asChild size="lg">
+                <Link href="/contact-us">
+                  Book Now <ArrowRight className="size-4" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline">
+                <a href={`tel:${brand.contact.phone}`}>
+                  <Phone className="size-4" /> {formatPhone(brand.contact.phone)}
+                </a>
+              </Button>
+            </div>
+          </Reveal>
+        </div>
 
-      <div className="container-px mx-auto max-w-6xl pt-20 pb-16 sm:pt-28 sm:pb-24 text-center">
-        <Reveal>
-          <Badge variant="accent" className="mx-auto">
-            <span className="font-mono">{brand.social.github}</span>
-          </Badge>
-        </Reveal>
-
-        <Reveal delay={0.06}>
-          <h1 className="mx-auto mt-6 max-w-4xl text-balance text-5xl font-bold leading-[1.05] sm:text-6xl md:text-7xl">
-            Ship a website that looks{" "}
-            <span className="text-gradient">designed</span>, not generated.
-          </h1>
-        </Reveal>
-
-        <Reveal delay={0.12}>
-          <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
-            {brand.description}
-          </p>
-        </Reveal>
-
-        <Reveal delay={0.18}>
-          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button asChild size="lg">
-              <Link href="#cta">
-                Start building <ArrowRight className="size-4" />
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link href="#features">See what's inside</Link>
-            </Button>
-          </div>
-        </Reveal>
-
-        {/* Product preview — flat surface, one traveling beam as the single featured motion */}
-        <Reveal delay={0.26}>
-          <div className="relative mx-auto mt-16 max-w-4xl">
-            <div className="relative overflow-hidden rounded-2xl border border-border bg-card text-left shadow-xl shadow-primary/5">
-              <BorderBeam />
-              <div className="flex items-center gap-1.5 border-b border-border px-4 py-3">
-                <span className="size-3 rounded-full bg-muted-foreground/30" />
-                <span className="size-3 rounded-full bg-muted-foreground/30" />
-                <span className="size-3 rounded-full bg-muted-foreground/30" />
-                <span className="ml-3 font-mono text-xs text-muted-foreground">
-                  {brand.domain}
-                </span>
-              </div>
-              <div className="grid gap-px bg-border sm:grid-cols-3">
-                {previews.map((p) => (
-                  <div key={p.title} className="bg-card p-5">
-                    <p.icon className="size-5 text-primary" />
-                    <p className="mt-3 font-medium">{p.title}</p>
-                    <p className="mt-1 text-sm text-muted-foreground">{p.body}</p>
-                  </div>
-                ))}
-              </div>
+        <Reveal delay={0.1}>
+          <div className="relative grid grid-cols-[1.3fr_1fr] gap-4">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-border shadow-2xl shadow-primary/15">
+              <Image
+                src="/ingested/insidetoursja/img-002.webp"
+                alt="Guests on a horseback tour in the ocean with Inside Tours Jamaica"
+                fill
+                priority
+                sizes="(max-width: 1024px) 60vw, 32vw"
+                quality={78}
+                className="object-cover"
+              />
+            </div>
+            <div className="relative mt-10 aspect-[3/4] overflow-hidden rounded-3xl border border-border shadow-xl shadow-primary/10">
+              <Image
+                src="/ingested/insidetoursja/img-028.webp"
+                alt="A group of guests posing together on an Inside Tours Jamaica excursion"
+                fill
+                sizes="(max-width: 1024px) 40vw, 22vw"
+                quality={75}
+                className="object-cover"
+              />
             </div>
           </div>
         </Reveal>

@@ -1,0 +1,68 @@
+{
+  "note": "Exact image-to-tour mapping reconstructed from the live DOM order on https://insidetoursja.com/tours-excursions/ (each tour <h4> is immediately followed by one <img class='et-waypoint ...'> in the same order, 22 headings <-> 22 images).",
+  "tours": [
+    { "name": "APPLETON ESTATE RUM TOUR", "description": "Its a fun and historical excursion of how one of our finest rum is made from start to finish, come and participate in exciting activities, and getting to taste the different ages of rum.", "image": "/ingested/insidetoursja/img-043.webp" },
+    { "name": "BOB MARLEY NINE MILE TOUR", "description": "A historical tour about a legend, the birthplace of our king of reggae, Bob Marley, come and experience a tour of where he lived and grew up as a child, and get to view his guitars, photographs, and awards! where it's all about a king.", "image": "/ingested/insidetoursja/img-044.webp" },
+    { "name": "DUNNS RIVER FALLS CATAMARAN CRUISE TOUR", "description": "A dynamic tour of our famous falls is a must!, enjoy snorkeling, and live music with drinks on board as your cruise on the Caribbean ocean.", "image": "/ingested/insidetoursja/img-045.webp" },
+    { "name": "KONOKO FALLS TOUR", "description": "A place of nature and leisure with friends and families, you'll meet indigenous birds and animals, take a tour through the beautiful gardens, climb the falls and take a swim in the cool and refreshing water.", "image": "/ingested/insidetoursja/img-046.webp" },
+    { "name": "NEGRIL'S DAY OUT", "description": "Spend the day on the long 7 miles beach and Margaritaville, relax and enjoy beach activities, while sipping on some cool drinks then take a trip to Rick's cafe to be entertained by live reggae music, the jumping off cliffs, and the beautiful sunset.", "image": "/ingested/insidetoursja/img-047.webp" },
+    { "name": "RICKS CAFE TOUR", "description": "One of the most famous attractions and top bars in the world is a fun and exciting place to visit with great music and dancing, a magnificent view of the sunset, and heart throbbing cliff jumping.", "image": "/ingested/insidetoursja/img-048.webp" },
+    { "name": "WHITE RIVER BAMBOO RAFTING TOUR", "description": "The no. 1 rafting attraction which lasts for 45 minutes to an hour is an experience you would not want to miss!, enjoy the exotic surroundings and the colorful birds as you sit back, relax and enjoy the Caribbean sun as the captain navigates the vibrant and rich river while you raft.", "image": "/ingested/insidetoursja/img-049.webp" },
+    { "name": "ATVs ADVENTURE TOUR", "description": "Take an exciting ride into the dirt coast of Jamaica's ground, an adventure that is fun-filled and memorable, take a ride down the trails of sweet Jamaica with inside tours of Jamaica.", "image": "/ingested/insidetoursja/img-050.webp" },
+    { "name": "DUNE BUGGY TOUR", "description": "Enjoy the breathtaking sceneries as you explore nature's beauty on the Wet and Dirty adventure tour, a fun-filled and thrilling experience you don't want to miss.", "image": "/ingested/insidetoursja/img-051.webp" },
+    { "name": "FISHING TRIPS", "description": "Excited about catching fish? Come and get an opportunity to reel in your impressive catch, with a lot of fun and excitement, as you relax and free your mind with beer and water aboard.", "image": "/ingested/insidetoursja/img-052.webp" },
+    { "name": "LOCAL DAY OUT", "description": "Take a bite into some of our delicious local meals for breakfast and lunch, take a walk into our market try local fruits, and meet some of our very own people.", "image": "/ingested/insidetoursja/img-053.webp" },
+    { "name": "PELICAN BAR TOUR", "description": "Come and visit the Pelican bar with sweet outdoor vibes, located in the middle of the sea, this Gem is one of a kind and a great experience for the entire family, the food is great and not to mention the red stripe beer or the Jamaican rum.", "image": "/ingested/insidetoursja/img-054.webp" },
+    { "name": "SCOTCHIES JERK CENTRE", "description": "The most famous for its jerk chicken and pork, come and get a taste of Jamaica's best for lunch, along with a red stripe or drink of your choice.", "image": "/ingested/insidetoursja/img-055.webp" },
+    { "name": "WHITE RIVER TUBING TOUR", "description": "A Fresh, cool river surrounded by tropical scenery is definitely the place to be with the entire family! The tubing which lasts between 45 minutes to an hour is a sight you will never forget with the lush green vegetation on every side you can also have a swim and enjoy the cool river water.", "image": "/ingested/insidetoursja/img-056.webp" },
+    { "name": "ZIPLINE OVER DUNN'S RIVER FALLS TOUR", "description": "A Memorable and thrilling experience as you enjoy the breathtaking view of the waterfalls, the tropical scenery from a different angle, and the nice cool Jamaican breeze as you move from 1 end to the other.", "image": "/ingested/insidetoursja/img-057.webp" },
+    { "name": "BLACK RIVER SAFARI TOUR", "description": "Enjoy a cruise down Jamaica's largest river, get to see Crocodiles of all sizes, explore the lush vegetation, and mangroves and view exotic birds as you journey along.", "image": "/ingested/insidetoursja/img-058.webp" },
+    { "name": "DUNN'S RIVER FALLS TOUR", "description": "Most famous falls in Jamaica! A climb into the cool, refreshing water is one of the best experiences you'll always remember. The fall is 180 ft high and 600 ft long, surrounded by lush green vegetation which makes the tour more breathtaking.", "image": "/ingested/insidetoursja/img-059.webp" },
+    { "name": "HORSEBACK RIDING IN THE OCEAN", "description": "Come and experience the thrill of riding the horses in the ocean, it is definitely a memorable and fun experience with the friendly horses in the nice, cool, and blue ocean.", "image": "/ingested/insidetoursja/img-060.webp" },
+    { "name": "LUMINOUS LAGOON TOUR", "description": "At night the lagoons glisten and sparkle making it as beautiful as ever, a swim into the lagoons would even make it better and fun-filled, you would not want to miss this exciting adventure.", "image": "/ingested/insidetoursja/img-061.webp" },
+    { "name": "RAFTING ON THE MARTHA BRAE TOUR", "description": "Enjoy a safe and relaxing cruise down the cool river, watching the leaves and trees being tossed to and fro by the wind as you gently ride your way down, sipping on a nice cold red stripe beer you can then quickly dive in and enjoy the refreshing water.", "image": "/ingested/insidetoursja/img-062.webp" },
+    { "name": "THE BLUE HOLE TOUR", "description": "A spectacular place for swimming, swinging, hiking and jumping! it is a friendly environment, with beautiful and unforgettable scenery.", "image": "/ingested/insidetoursja/img-063.webp" },
+    { "name": "YS FALLS TOUR", "description": "A Mesmerizing experience, an attraction for the whole family! Come and experience the seven falls that cascade into beautiful, natural pools which are great for swimming!", "image": "/ingested/insidetoursja/img-064.webp" }
+  ],
+  "pageImages": {
+    "home": {
+      "hero": ["/ingested/insidetoursja/img-002.webp", "/ingested/insidetoursja/img-003.webp"],
+      "gallery": ["/ingested/insidetoursja/img-021.webp", "/ingested/insidetoursja/img-022.webp", "/ingested/insidetoursja/img-028.webp"]
+    },
+    "services": {
+      "images": ["/ingested/insidetoursja/img-031.webp", "/ingested/insidetoursja/img-035.webp"]
+    },
+    "airport-transfers": {
+      "images": ["/ingested/insidetoursja/img-036.webp", "/ingested/insidetoursja/img-037.webp", "/ingested/insidetoursja/img-038.webp", "/ingested/insidetoursja/img-028.webp"]
+    },
+    "montego-bay-airport-transfers": {
+      "images": ["/ingested/insidetoursja/img-039.webp", "/ingested/insidetoursja/img-040.webp"]
+    },
+    "kingston-airport-transfers": {
+      "images": ["/ingested/insidetoursja/img-039.webp", "/ingested/insidetoursja/img-041.webp"]
+    },
+    "tours-excursions": {
+      "hero": "/ingested/insidetoursja/img-042.webp"
+    },
+    "about-us": {
+      "images": ["/ingested/insidetoursja/img-066.webp", "/ingested/insidetoursja/img-041.webp"]
+    },
+    "gallery": {
+      "images": [
+        "/ingested/insidetoursja/img-068.webp", "/ingested/insidetoursja/img-069.webp", "/ingested/insidetoursja/img-070.webp",
+        "/ingested/insidetoursja/img-071.webp", "/ingested/insidetoursja/img-072.webp", "/ingested/insidetoursja/img-073.webp",
+        "/ingested/insidetoursja/img-054.webp", "/ingested/insidetoursja/img-028.webp", "/ingested/insidetoursja/img-074.webp",
+        "/ingested/insidetoursja/img-075.webp", "/ingested/insidetoursja/img-076.webp", "/ingested/insidetoursja/img-077.webp",
+        "/ingested/insidetoursja/img-078.webp", "/ingested/insidetoursja/img-061.webp", "/ingested/insidetoursja/img-079.webp",
+        "/ingested/insidetoursja/img-080.webp", "/ingested/insidetoursja/img-081.webp", "/ingested/insidetoursja/img-082.webp",
+        "/ingested/insidetoursja/img-083.webp", "/ingested/insidetoursja/img-084.webp", "/ingested/insidetoursja/img-085.webp",
+        "/ingested/insidetoursja/img-086.webp", "/ingested/insidetoursja/img-087.webp",
+        "/ingested/insidetoursja/img-021.webp", "/ingested/insidetoursja/img-022.webp", "/ingested/insidetoursja/img-035.webp",
+        "/ingested/insidetoursja/img-036.webp"
+      ]
+    },
+    "contact-us": {
+      "images": ["/ingested/insidetoursja/img-089.webp", "/ingested/insidetoursja/img-090.webp", "/ingested/insidetoursja/img-091.webp"]
+    }
+  }
+}
