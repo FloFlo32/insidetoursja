@@ -22,6 +22,7 @@ export function ImageCard({
   eyebrow,
   className,
   ratio = "aspect-[4/3]",
+  activityId,
 }: {
   src: string;
   alt: string;
@@ -31,6 +32,8 @@ export function ImageCard({
   eyebrow?: string;
   className?: string;
   ratio?: string;
+  /** Set to wire this card's link into the Yetti booking popup instead of navigating. Empty string opens the general widget. */
+  activityId?: string;
 }) {
   const inner = (
     <>
@@ -67,7 +70,11 @@ export function ImageCard({
     "group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 motion-reduce:transition-none motion-reduce:hover:translate-y-0";
 
   return href ? (
-    <Link href={href} className={cn(base, "cursor-pointer", className)}>
+    <Link
+      href={href}
+      className={cn(base, "cursor-pointer", className)}
+      {...(activityId !== undefined ? { "data-yetti-activity": activityId } : {})}
+    >
       {inner}
     </Link>
   ) : (
