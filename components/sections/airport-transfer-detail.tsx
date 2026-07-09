@@ -61,7 +61,7 @@ export function AirportTransferDetail({
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg">
-                <Link href="/contact-us" data-yetti-activity="">
+                <Link href="/contact-us">
                   Inquire / Book Now <ArrowRight className="size-4" />
                 </Link>
               </Button>

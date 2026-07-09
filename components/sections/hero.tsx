@@ -29,7 +29,7 @@ export function Hero() {
           <Reveal delay={0.2}>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg">
-                <Link href="/contact-us" data-yetti-activity="">
+                <Link href="/contact-us">
                   Book Now <ArrowRight className="size-4" />
                 </Link>
               </Button>

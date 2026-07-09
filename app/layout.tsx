@@ -5,7 +5,6 @@ import { fontVariables } from "@/lib/fonts";
 import { ThemeScript } from "@/components/theme-provider";
 import { FaqWidget } from "@/components/widget/faq-widget";
 import { WhatsAppWidget } from "@/components/widget/whatsapp-widget";
-import { YettiBookingScript } from "@/components/widget/yetti-booking-script";
 
 const siteUrl = `https://${brand.domain}`;
 
@@ -46,7 +45,6 @@ export default function RootLayout({
         {children}
         <FaqWidget />
         <WhatsAppWidget />
-        <YettiBookingScript />
       </body>
     </html>
   );

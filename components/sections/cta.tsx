@@ -20,7 +20,7 @@ export function CTA() {
           </p>
           <div className="relative mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button asChild size="lg" variant="secondary">
-              <Link href="/contact-us" data-yetti-activity="">
+              <Link href="/contact-us">
                 Book Now <ArrowRight className="size-4" />
               </Link>
             </Button>

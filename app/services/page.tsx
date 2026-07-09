@@ -118,7 +118,7 @@ export default function ServicesPage() {
                 yours to enjoy 2 or 3 tours in one exciting day.
               </p>
               <Button asChild size="lg" className="mt-7">
-                <Link href="/contact-us" data-yetti-activity="">
+                <Link href="/contact-us">
                   Book Now <ArrowRight className="size-4" />
                 </Link>
               </Button>

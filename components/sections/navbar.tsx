@@ -117,9 +117,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-2">
           <Button asChild size="default" className="hidden sm:inline-flex">
-            <Link href="/contact-us" data-yetti-activity="">
-              Book Now
-            </Link>
+            <Link href="/contact-us">Book Now</Link>
           </Button>
           <Button
             variant="ghost"
@@ -169,7 +167,7 @@ export function Navbar() {
               {formatPhone(brand.contact.phone)}
             </a>
             <Button asChild className="mt-2">
-              <Link href="/contact-us" data-yetti-activity="" onClick={() => setOpen(false)}>
+              <Link href="/contact-us" onClick={() => setOpen(false)}>
                 Book Now
               </Link>
             </Button>
