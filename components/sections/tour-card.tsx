@@ -1,5 +1,7 @@
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, CalendarCheck } from "lucide-react";
 import type { Tour } from "@/lib/tours";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export function TourCard({ tour, className }: { tour: Tour; className?: string }) {
@@ -10,7 +12,7 @@ export function TourCard({ tour, className }: { tour: Tour; className?: string }
         className
       )}
     >
-      <div className="aspect-[4/3] overflow-hidden bg-muted">
+      <div className="relative aspect-[4/3] overflow-hidden bg-muted">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={tour.image}
@@ -19,17 +21,29 @@ export function TourCard({ tour, className }: { tour: Tour; className?: string }
           decoding="async"
           className="size-full object-cover transition-transform duration-500 group-hover:scale-[1.05] motion-reduce:transition-none"
         />
+        {tour.activityId && (
+          <Badge variant="accent" className="absolute left-3 top-3 bg-card/90 backdrop-blur">
+            Book Instantly
+          </Badge>
+        )}
       </div>
       <div className="flex flex-1 flex-col gap-2.5 p-5">
         <h3 className="text-lg font-semibold leading-snug">{tour.name}</h3>
         <p className="flex-1 text-pretty text-sm text-muted-foreground">{tour.description}</p>
-        <a
-          href="/contact-us"
-          className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
-        >
-          <MessageCircle className="size-4" />
-          Enquire about this tour
-        </a>
+        {tour.activityId ? (
+          <Button type="button" data-yetti-activity={tour.activityId} className="mt-2 w-full">
+            <CalendarCheck className="size-4" />
+            Book Now
+          </Button>
+        ) : (
+          <a
+            href="/contact-us"
+            className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+          >
+            <MessageCircle className="size-4" />
+            Enquire about this tour
+          </a>
+        )}
       </div>
     </div>
   );
