@@ -1,4 +1,4 @@
-import { MessageCircle, CalendarCheck } from "lucide-react";
+import { CalendarCheck } from "lucide-react";
 import type { Tour } from "@/lib/tours";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -30,20 +30,14 @@ export function TourCard({ tour, className }: { tour: Tour; className?: string }
       <div className="flex flex-1 flex-col gap-2.5 p-5">
         <h3 className="text-lg font-semibold leading-snug">{tour.name}</h3>
         <p className="flex-1 text-pretty text-sm text-muted-foreground">{tour.description}</p>
-        {tour.activityId ? (
-          <Button type="button" data-yetti-activity={tour.activityId} className="mt-2 w-full">
-            <CalendarCheck className="size-4" />
-            Book Now
-          </Button>
-        ) : (
-          <a
-            href="/contact-us"
-            className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
-          >
-            <MessageCircle className="size-4" />
-            Enquire about this tour
-          </a>
-        )}
+        <Button
+          type="button"
+          data-yetti-activity={tour.activityId ?? ""}
+          className="mt-2 w-full"
+        >
+          <CalendarCheck className="size-4" />
+          Book Now
+        </Button>
       </div>
     </div>
   );
