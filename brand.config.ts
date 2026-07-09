@@ -72,6 +72,11 @@ export const brand = {
     address: "Montego Bay, Jamaica",
     mapQuery: "Montego Bay, Jamaica",
   },
+
+  /** Same PayPal.me link the source site used for its "Pay Now" button. */
+  payment: {
+    paypalMe: "https://www.paypal.com/paypalme/floatingmemorie",
+  },
 } as const;
 
 export type Brand = typeof brand;

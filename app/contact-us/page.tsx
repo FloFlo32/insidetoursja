@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Phone, Mail, Clock, ArrowRight } from "lucide-react";
+import { Phone, Mail, Clock, ArrowRight, CreditCard } from "lucide-react";
 import { brand } from "@/brand.config";
 import { Navbar } from "@/components/sections/navbar";
 import { Footer } from "@/components/sections/footer";
@@ -36,6 +36,13 @@ const infoCards = [
     value: "Open every day, 8am - 9pm",
     href: null,
   },
+  {
+    icon: CreditCard,
+    label: "Pay Now",
+    value: "Pay via PayPal",
+    href: brand.payment.paypalMe,
+    external: true,
+  },
 ];
 
 export default function ContactUsPage() {
@@ -52,7 +59,7 @@ export default function ContactUsPage() {
         />
 
         <section className="container-px mx-auto max-w-7xl py-20 sm:py-28">
-          <RevealGroup className="grid gap-5 sm:grid-cols-3">
+          <RevealGroup className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {infoCards.map((card) => {
               const inner = (
                 <>
@@ -70,6 +77,8 @@ export default function ContactUsPage() {
                   {card.href ? (
                     <a
                       href={card.href}
+                      target={card.external ? "_blank" : undefined}
+                      rel={card.external ? "noopener noreferrer" : undefined}
                       className="block h-full rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/30"
                     >
                       {inner}

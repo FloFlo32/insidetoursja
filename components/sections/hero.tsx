@@ -57,11 +57,21 @@ export function Hero() {
             </div>
             <div className="relative mt-10 aspect-[3/4] overflow-hidden rounded-3xl border border-border shadow-xl shadow-primary/10">
               <Image
-                src="/ingested/insidetoursja/img-028.webp"
-                alt="A group of guests posing together on an Inside Tours Jamaica excursion"
+                src="/stock/beach-jump-friends.webp"
+                alt="Friends jumping for joy on a Jamaican beach"
                 fill
                 sizes="(max-width: 1024px) 40vw, 22vw"
                 quality={75}
+                className="object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-6 left-6 size-24 overflow-hidden rounded-2xl border-4 border-background shadow-lg shadow-black/20 sm:size-28">
+              <Image
+                src="/ingested/insidetoursja/img-028.webp"
+                alt="A group of guests posing together on an Inside Tours Jamaica excursion"
+                fill
+                sizes="112px"
+                quality={70}
                 className="object-cover"
               />
             </div>

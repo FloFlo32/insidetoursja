@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Phone, Image as ImageIcon } from "lucide-react";
+import { ArrowRight, CheckCircle2, Phone, Image as ImageIcon, CreditCard } from "lucide-react";
 import { brand } from "@/brand.config";
 import { PageHero } from "@/components/sections/page-hero";
 import { Button } from "@/components/ui/button";
@@ -70,7 +70,16 @@ export function AirportTransferDetail({
                   <Phone className="size-4" /> {formatPhone(brand.contact.phone)}
                 </a>
               </Button>
+              <Button asChild size="lg" variant="secondary">
+                <a href={brand.payment.paypalMe} target="_blank" rel="noopener noreferrer">
+                  <CreditCard className="size-4" /> Pay Now
+                </a>
+              </Button>
             </div>
+            <p className="mt-3 text-xs text-muted-foreground">
+              Pay Now redirects to our secure PayPal page. Enter your amount and follow the
+              steps to complete your payment.
+            </p>
           </Reveal>
 
           <RevealGroup className="flex flex-col gap-5">
