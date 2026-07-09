@@ -1,32 +1,33 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Reveal, RevealGroup, RevealItem } from "@/components/magic/reveal";
 import { Button } from "@/components/ui/button";
 
 const shots = [
   {
-    src: "/stock/waterfall-tourists.webp",
-    alt: "Tourists swimming and exploring a waterfall pool in Jamaica",
-    label: "Waterfalls & Rivers",
+    src: "/stock/dunns-falls-crowd.webp",
+    alt: "Guests swimming and taking photos at the base of Dunn's River Falls",
+    label: "Dunn's River Falls",
     wrapClassName: "sm:row-span-2",
     imgClassName: "aspect-[4/5] sm:aspect-auto sm:h-full",
   },
   {
-    src: "/stock/atv-adventure.webp",
-    alt: "Guest on an ATV adventure tour",
-    label: "ATV Adventure",
+    src: "/stock/blue-hole-rope-swing.webp",
+    alt: "A guest swinging on a rope into the Blue Hole's turquoise water",
+    label: "Rope Swing Thrills",
     imgClassName: "aspect-[4/3]",
   },
   {
-    src: "/stock/waterfall-swim.webp",
-    alt: "Guests swimming beneath a lush tropical waterfall",
-    label: "Swim & Explore",
+    src: "/stock/river-tubing-guests.webp",
+    alt: "Guests tubing down a calm, tree-lined Jamaican river",
+    label: "River Tubing",
     imgClassName: "aspect-[4/3]",
   },
   {
-    src: "/stock/beach-sunset-friends.webp",
-    alt: "Friends enjoying a Jamaican beach sunset",
-    label: "Sunset Vibes",
+    src: "/stock/dunns-falls-rasta-house.webp",
+    alt: "Guests climbing Dunn's River Falls past the colorful riverside houses",
+    label: "Falls & Village Life",
     wrapClassName: "sm:col-span-2",
     imgClassName: "aspect-[16/9]",
   },

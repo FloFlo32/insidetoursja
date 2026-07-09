@@ -15,15 +15,21 @@ export const metadata: Metadata = {
 };
 
 const images = [
-  "img-068", "img-069", "img-070", "img-071", "img-072", "img-073",
-  "img-054", "img-028", "img-074", "img-075", "img-076", "img-077",
-  "img-078", "img-061", "img-079", "img-080", "img-081", "img-082",
-  "img-083", "img-084", "img-085", "img-086", "img-087",
-  "img-021", "img-022", "img-035", "img-036",
-].map((id) => ({
-  src: `/ingested/insidetoursja/${id}.webp`,
-  alt: `${brand.name} guests enjoying a tour in Jamaica`,
-}));
+  { src: "/stock/dunns-falls-crowd.webp", alt: "Guests swimming and taking photos at the base of Dunn's River Falls" },
+  { src: "/stock/blue-hole-rope-swing.webp", alt: "A guest swinging on a rope into the Blue Hole's turquoise water" },
+  { src: "/stock/river-tubing-guests.webp", alt: "Guests tubing down a calm, tree-lined Jamaican river" },
+  { src: "/stock/dunns-falls-rasta-house.webp", alt: "Guests climbing Dunn's River Falls past the colorful riverside houses" },
+  ...[
+    "img-068", "img-069", "img-070", "img-071", "img-072", "img-073",
+    "img-054", "img-028", "img-074", "img-075", "img-076", "img-077",
+    "img-078", "img-061", "img-079", "img-080", "img-081", "img-082",
+    "img-083", "img-084", "img-085", "img-086", "img-087",
+    "img-021", "img-022", "img-035", "img-036",
+  ].map((id) => ({
+    src: `/ingested/insidetoursja/${id}.webp`,
+    alt: `${brand.name} guests enjoying a tour in Jamaica`,
+  })),
+];
 
 export default function GalleryPage() {
   return (
