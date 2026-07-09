@@ -1,4 +1,4 @@
-import { MessageCircle } from "lucide-react";
+import { CalendarCheck } from "lucide-react";
 import type { Tour } from "@/lib/tours";
 import { cn } from "@/lib/utils";
 
@@ -25,10 +25,11 @@ export function TourCard({ tour, className }: { tour: Tour; className?: string }
         <p className="flex-1 text-pretty text-sm text-muted-foreground">{tour.description}</p>
         <a
           href="/contact-us"
+          data-yetti-activity=""
           className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
         >
-          <MessageCircle className="size-4" />
-          Enquire about this tour
+          <CalendarCheck className="size-4" />
+          Book Now
         </a>
       </div>
     </div>

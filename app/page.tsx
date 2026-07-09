@@ -5,7 +5,6 @@ import { Bento } from "@/components/sections/bento";
 import { JamaicaShowcase } from "@/components/sections/jamaica-showcase";
 import { AboutPreview } from "@/components/sections/about-preview";
 import { ToursPreview } from "@/components/sections/tours-preview";
-import { BookInstantly } from "@/components/sections/book-instantly";
 import { TransfersPreview } from "@/components/sections/transfers-preview";
 import { CTA } from "@/components/sections/cta";
 import { Footer } from "@/components/sections/footer";
@@ -21,7 +20,6 @@ export default function Home() {
         <JamaicaShowcase />
         <AboutPreview />
         <ToursPreview />
-        <BookInstantly />
         <TransfersPreview />
         <CTA />
       </main>
