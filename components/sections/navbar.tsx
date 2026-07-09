@@ -4,17 +4,22 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Phone } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, CalendarCheck } from "lucide-react";
 import { brand } from "@/brand.config";
 import { navItems } from "@/lib/nav-items";
 import { formatPhone } from "@/lib/format-phone";
+import { tours } from "@/lib/tours";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+
+const bookableTours = tours.filter((t) => t.activityId);
 
 export function Navbar() {
   const [scrolled, setScrolled] = React.useState(false);
   const [open, setOpen] = React.useState(false);
   const [openDropdown, setOpenDropdown] = React.useState<string | null>(null);
+  const [bookMenuOpen, setBookMenuOpen] = React.useState(false);
+  const bookMenuRef = React.useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
   React.useEffect(() => {
@@ -26,7 +31,26 @@ export function Navbar() {
 
   React.useEffect(() => {
     setOpen(false);
+    setBookMenuOpen(false);
   }, [pathname]);
+
+  React.useEffect(() => {
+    if (!bookMenuOpen) return;
+    const onDocClick = (e: MouseEvent) => {
+      if (bookMenuRef.current && !bookMenuRef.current.contains(e.target as Node)) {
+        setBookMenuOpen(false);
+      }
+    };
+    const onEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setBookMenuOpen(false);
+    };
+    document.addEventListener("click", onDocClick);
+    document.addEventListener("keydown", onEsc);
+    return () => {
+      document.removeEventListener("click", onDocClick);
+      document.removeEventListener("keydown", onEsc);
+    };
+  }, [bookMenuOpen]);
 
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
@@ -116,9 +140,53 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
-          <Button asChild size="default" className="hidden sm:inline-flex">
-            <Link href="/contact-us">Book Now</Link>
-          </Button>
+          <div className="relative hidden sm:block" ref={bookMenuRef}>
+            <Button
+              type="button"
+              size="default"
+              onClick={() => setBookMenuOpen((o) => !o)}
+              aria-expanded={bookMenuOpen}
+              aria-haspopup="true"
+            >
+              Book Now
+              <ChevronDown className={cn("size-3.5 transition-transform", bookMenuOpen && "rotate-180")} />
+            </Button>
+            <div
+              className={cn(
+                "absolute right-0 top-full w-80 pt-2 transition-all duration-150",
+                bookMenuOpen
+                  ? "pointer-events-auto translate-y-0 opacity-100"
+                  : "pointer-events-none -translate-y-1 opacity-0"
+              )}
+            >
+              <div className="overflow-hidden rounded-2xl border border-border bg-card p-2 shadow-xl shadow-black/10">
+                <p className="px-3 pb-1.5 pt-2 text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground">
+                  Book instantly
+                </p>
+                {bookableTours.map((t) => (
+                  <button
+                    key={t.activityId}
+                    type="button"
+                    data-yetti-activity={t.activityId}
+                    onClick={() => setBookMenuOpen(false)}
+                    className="flex w-full items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-left text-sm font-medium text-foreground/85 transition-colors hover:bg-accent hover:text-foreground"
+                  >
+                    {t.name}
+                    <CalendarCheck className="size-4 shrink-0 text-primary" />
+                  </button>
+                ))}
+                <div className="mt-1 border-t border-border pt-1">
+                  <Link
+                    href="/contact-us"
+                    onClick={() => setBookMenuOpen(false)}
+                    className="block rounded-xl px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+                  >
+                    Ask about another tour
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
           <Button
             variant="ghost"
             size="icon"
@@ -166,9 +234,28 @@ export function Navbar() {
               <Phone className="size-4 text-primary" />
               {formatPhone(brand.contact.phone)}
             </a>
-            <Button asChild className="mt-2">
+            <div className="mt-3 rounded-2xl border border-white/10 p-3">
+              <p className="px-1 pb-2 text-xs font-semibold uppercase tracking-[0.15em] text-white/50">
+                Book instantly
+              </p>
+              <div className="flex flex-col gap-1">
+                {bookableTours.map((t) => (
+                  <button
+                    key={t.activityId}
+                    type="button"
+                    data-yetti-activity={t.activityId}
+                    onClick={() => setOpen(false)}
+                    className="flex w-full items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-left text-sm font-medium text-white/85 transition-colors hover:bg-white/10"
+                  >
+                    {t.name}
+                    <CalendarCheck className="size-4 shrink-0 text-primary" />
+                  </button>
+                ))}
+              </div>
+            </div>
+            <Button asChild className="mt-3">
               <Link href="/contact-us" onClick={() => setOpen(false)}>
-                Book Now
+                Ask About Another Tour
               </Link>
             </Button>
           </div>
