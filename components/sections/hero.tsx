@@ -46,8 +46,8 @@ export function Hero() {
           <div className="relative grid grid-cols-[1.3fr_1fr] gap-4">
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-border shadow-2xl shadow-primary/15">
               <Image
-                src="/stock/beach-jump-friends.webp"
-                alt="Friends jumping for joy on a Jamaican beach"
+                src="/ingested/insidetoursja/img-057.webp"
+                alt="A guest zip-lining through the Jamaican rainforest canopy"
                 fill
                 priority
                 sizes="(max-width: 1024px) 60vw, 32vw"
@@ -57,8 +57,8 @@ export function Hero() {
             </div>
             <div className="relative mt-10 aspect-[3/4] overflow-hidden rounded-3xl border border-border shadow-xl shadow-primary/10">
               <Image
-                src="/stock/cliff-jump-ocean.webp"
-                alt="Guests cliff jumping into the ocean on a Jamaica excursion"
+                src="/ingested/insidetoursja/img-049.webp"
+                alt="A couple relaxing on a bamboo raft during a Jamaica river tour"
                 fill
                 sizes="(max-width: 1024px) 40vw, 22vw"
                 quality={75}

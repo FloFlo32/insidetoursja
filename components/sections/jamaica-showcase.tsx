@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button";
 const shots = [
   {
     src: "/stock/dunns-falls-crowd.webp",
-    alt: "Guests swimming and taking photos at the base of Dunn's River Falls",
-    label: "Dunn's River Falls",
+    alt: "Guests swimming and taking photos at the base of Hidden Falls",
+    label: "Hidden Falls",
     wrapClassName: "sm:row-span-2",
     imgClassName: "aspect-[4/5] sm:aspect-auto sm:h-full",
   },
