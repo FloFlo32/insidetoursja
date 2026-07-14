@@ -13,9 +13,9 @@ const shots = [
     imgClassName: "aspect-[4/5] sm:aspect-auto sm:h-full",
   },
   {
-    src: "/stock/blue-hole-rope-swing.webp",
+    src: "/ingested/insidetoursja/img-blue-hole-01.webp",
     alt: "A guest swinging on a rope into the Blue Hole's turquoise water",
-    label: "Rope Swing Thrills",
+    label: "Blue Hole Falls",
     imgClassName: "aspect-[4/3]",
   },
   {
