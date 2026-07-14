@@ -42,6 +42,7 @@ export function AirportTransferDetail({
         description={bodyOne}
         image={heroImage}
         imageAlt={`${airportName} private transfer vehicle`}
+        imagePosition="top"
       />
 
       <section className="container-px mx-auto max-w-7xl py-20 sm:py-28">
@@ -96,6 +97,7 @@ export function AirportTransferDetail({
                   title="Your driver is waiting"
                   description="Same friendly faces, every trip. We treat you like family from the moment you land."
                   ratio="aspect-[4/3]"
+                  imagePosition="top"
                 />
               </RevealItem>
             )}
