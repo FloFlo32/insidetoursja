@@ -19,7 +19,10 @@ export function TourCard({ tour, className }: { tour: Tour; className?: string }
           alt={tour.name}
           loading="lazy"
           decoding="async"
-          className="size-full object-cover transition-transform duration-500 group-hover:scale-[1.05] motion-reduce:transition-none"
+          className={cn(
+            "size-full object-cover transition-transform duration-500 group-hover:scale-[1.05] motion-reduce:transition-none",
+            tour.imagePosition === "top" ? "object-top" : "object-center"
+          )}
         />
         {tour.activityId && (
           <Badge variant="accent" className="absolute left-3 top-3 bg-card/90 backdrop-blur">

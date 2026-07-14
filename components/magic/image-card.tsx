@@ -22,6 +22,7 @@ export function ImageCard({
   eyebrow,
   className,
   ratio = "aspect-[4/3]",
+  imagePosition = "center",
 }: {
   src: string;
   alt: string;
@@ -31,6 +32,7 @@ export function ImageCard({
   eyebrow?: string;
   className?: string;
   ratio?: string;
+  imagePosition?: "center" | "top";
 }) {
   const inner = (
     <>
@@ -41,7 +43,10 @@ export function ImageCard({
           alt={alt}
           loading="lazy"
           decoding="async"
-          className="size-full object-cover transition-transform duration-500 group-hover:scale-[1.04] motion-reduce:transition-none"
+          className={cn(
+            "size-full object-cover transition-transform duration-500 group-hover:scale-[1.04] motion-reduce:transition-none",
+            imagePosition === "top" ? "object-top" : "object-center"
+          )}
         />
       </div>
       <div className="flex flex-1 flex-col gap-2 p-5">

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { Reveal } from "@/components/magic/reveal";
+import { cn } from "@/lib/utils";
 
 export function PageHero({
   eyebrow,
@@ -9,12 +10,14 @@ export function PageHero({
   description,
   image,
   imageAlt,
+  imagePosition = "center",
 }: {
   eyebrow: string;
   title: string;
   description: string;
   image: string;
   imageAlt: string;
+  imagePosition?: "center" | "top";
 }) {
   return (
     <section className="relative overflow-hidden bg-secondary/40">
@@ -49,7 +52,7 @@ export function PageHero({
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
               quality={75}
-              className="object-cover"
+              className={cn("object-cover", imagePosition === "top" ? "object-top" : "object-center")}
             />
           </div>
         </Reveal>

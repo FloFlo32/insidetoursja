@@ -1,4 +1,4 @@
-export type Tour = { name: string; description: string; image: string; activityId?: string };
+export type Tour = { name: string; description: string; image: string; activityId?: string; imagePosition?: "center" | "top" };
 
 /**
  * The 22 tours from insidetoursja.com/tours-excursions/, each paired with its
@@ -18,7 +18,7 @@ export const tours: Tour[] = [
   { name: "Ricks Cafe Tour", description: "One of the most famous attractions and top bars in the world is a fun and exciting place to visit with great music and dancing, a magnificent view of the sunset, and heart throbbing cliff jumping.", image: "/ingested/insidetoursja/img-ricks-cafe-sign-sunset.webp" },
   { name: "ATVs Adventure Tour", description: "Take an exciting ride into the dirt coast of Jamaica's ground, an adventure that is fun-filled and memorable, take a ride down the trails of sweet Jamaica with inside tours of Jamaica.", image: "/ingested/insidetoursja/img-050.webp" },
   { name: "Dune Buggy Tour", description: "Enjoy the breathtaking sceneries as you explore nature's beauty on the Wet and Dirty adventure tour, a fun-filled and thrilling experience you don't want to miss.", image: "/ingested/insidetoursja/img-051.webp" },
-  { name: "Fishing Trips", description: "Excited about catching fish? Come and get an opportunity to reel in your impressive catch, with a lot of fun and excitement, as you relax and free your mind with beer and water aboard.", image: "/ingested/insidetoursja/img-fishing-trip-02.webp" },
+  { name: "Fishing Trips", description: "Excited about catching fish? Come and get an opportunity to reel in your impressive catch, with a lot of fun and excitement, as you relax and free your mind with beer and water aboard.", image: "/ingested/insidetoursja/img-fishing-trip-02.webp", imagePosition: "top" },
   { name: "Local Day Out", description: "Take a bite into some of our delicious local meals for breakfast and lunch, take a walk into our market try local fruits, and meet some of our very own people.", image: "/ingested/insidetoursja/img-053.webp" },
   { name: "Pelican Bar Tour", description: "Come and visit the Pelican bar with sweet outdoor vibes, located in the middle of the sea, this Gem is one of a kind and a great experience for the entire family, the food is great and not to mention the red stripe beer or the Jamaican rum.", image: "/ingested/insidetoursja/img-054.webp" },
   { name: "Scotchies Jerk Centre", description: "The most famous for its jerk chicken and pork, come and get a taste of Jamaica's best for lunch, along with a red stripe or drink of your choice.", image: "/ingested/insidetoursja/img-055.webp" },
