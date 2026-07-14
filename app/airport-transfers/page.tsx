@@ -19,7 +19,7 @@ const transfers = [
   {
     title: "Montego Bay Airport Transfers",
     href: "/montego-bay-airport-transfers",
-    image: "/ingested/insidetoursja/img-039.webp",
+    image: "/ingested/insidetoursja/img-airport-transfer-pickup.webp",
     alt: "Private airport transfer vehicle for Montego Bay, Jamaica",
     description:
       "Sangster International Airport Montego Bay is a leading tourism gateway to the island of Jamaica.",
@@ -43,7 +43,7 @@ export default function AirportTransfersPage() {
           eyebrow="Airport Transfers"
           title="Airport Transfers"
           description="Book your airport transportation with us and experience the greatest (discount) ever inside tours Jamaica."
-          image="/ingested/insidetoursja/img-036.webp"
+          image="/ingested/insidetoursja/img-airport-transfer-exit.webp"
           imageAlt="Private airport transfer vehicle waiting for guests in Jamaica"
         />
 

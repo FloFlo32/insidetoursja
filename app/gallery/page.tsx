@@ -19,6 +19,8 @@ const images = [
   { src: "/stock/blue-hole-rope-swing.webp", alt: "A guest swinging on a rope into the Blue Hole's turquoise water" },
   { src: "/stock/river-tubing-guests.webp", alt: "Guests tubing down a calm, tree-lined Jamaican river" },
   { src: "/stock/dunns-falls-rasta-house.webp", alt: "Guests climbing Dunn's River Falls past the colorful riverside houses" },
+  { src: "/ingested/insidetoursja/img-fishing-trip-02.webp", alt: "An Inside Tours Jamaica guide posing with a fishing trip catch at the Ocho Rios dock" },
+  { src: "/ingested/insidetoursja/img-fishing-trip-01.webp", alt: "A pair of marlin caught on an Inside Tours Jamaica fishing trip, laid out on the dock" },
   ...[
     "img-068", "img-069", "img-070", "img-071", "img-072", "img-073",
     "img-054", "img-028", "img-074", "img-075", "img-076", "img-077",

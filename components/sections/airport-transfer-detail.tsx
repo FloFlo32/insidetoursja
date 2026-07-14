@@ -4,6 +4,7 @@ import { brand } from "@/brand.config";
 import { PageHero } from "@/components/sections/page-hero";
 import { Button } from "@/components/ui/button";
 import { Reveal, RevealGroup, RevealItem } from "@/components/magic/reveal";
+import { ImageCard } from "@/components/magic/image-card";
 import { formatPhone } from "@/lib/format-phone";
 
 const inclusions = [
@@ -21,6 +22,8 @@ export function AirportTransferDetail({
   bodyOne,
   bodyTwo,
   planText,
+  secondaryImage,
+  secondaryImageAlt,
 }: {
   title: string;
   airportName: string;
@@ -28,6 +31,8 @@ export function AirportTransferDetail({
   bodyOne: string;
   bodyTwo: string;
   planText: string;
+  secondaryImage?: string;
+  secondaryImageAlt?: string;
 }) {
   return (
     <>
@@ -83,6 +88,17 @@ export function AirportTransferDetail({
           </Reveal>
 
           <RevealGroup className="flex flex-col gap-5">
+            {secondaryImage && (
+              <RevealItem>
+                <ImageCard
+                  src={secondaryImage}
+                  alt={secondaryImageAlt ?? `${airportName} guests with their driver`}
+                  title="Your driver is waiting"
+                  description="Same friendly faces, every trip. We treat you like family from the moment you land."
+                  ratio="aspect-[4/3]"
+                />
+              </RevealItem>
+            )}
             <RevealItem className="rounded-2xl border border-primary/20 bg-primary/5 p-6">
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                 Plan a Visit
