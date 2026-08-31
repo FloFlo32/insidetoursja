@@ -26,7 +26,7 @@ export default function ToursExcursionsPage() {
           title="Tours & Excursions"
           description="Taking you to hidden local gems, sites, beaches and restaurants. The real Jamaican experience. Let's tour!"
           image="/ingested/insidetoursja/img-042.webp"
-          imageAlt="Inside Tours Jamaica tour and excursion experience"
+          imageAlt="Guests posing at Blue Adventure Tours during an Inside Tours Jamaica excursion"
         />
 
         <section className="container-px mx-auto max-w-7xl py-20 sm:py-28">
@@ -42,8 +42,9 @@ export default function ToursExcursionsPage() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="mt-4 max-w-2xl text-pretty text-lg text-muted-foreground">
-              No fixed prices are listed. Message us on Facebook or Instagram, call, or
-              email, and we&apos;ll help you build the perfect day.
+              Every tour is private, just for you and your group &mdash; no shared departures.
+              No fixed prices are listed; message us on WhatsApp or email and we&apos;ll help
+              you build the perfect day.
             </p>
           </Reveal>
 

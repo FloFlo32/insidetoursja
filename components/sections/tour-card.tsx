@@ -1,10 +1,20 @@
-import { CalendarCheck } from "lucide-react";
+import { Mail } from "lucide-react";
 import type { Tour } from "@/lib/tours";
-import { Badge } from "@/components/ui/badge";
+import { brand } from "@/brand.config";
+import { WhatsAppIcon } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export function TourCard({ tour, className }: { tour: Tour; className?: string }) {
+  const whatsappNumber = brand.contact.whatsapp.replace(/[^\d]/g, "");
+  const whatsappText = encodeURIComponent(
+    `Hi ${brand.name}, I'd like to enquire about the ${tour.name} (private tour).`
+  );
+  const emailSubject = encodeURIComponent(`Enquiry: ${tour.name}`);
+  const emailBody = encodeURIComponent(
+    `Hi ${brand.name},\n\nI'd like to enquire about the ${tour.name} (private tour).\n\n`
+  );
+
   return (
     <div
       className={cn(
@@ -24,23 +34,28 @@ export function TourCard({ tour, className }: { tour: Tour; className?: string }
             tour.imagePosition === "top" ? "object-top" : "object-center"
           )}
         />
-        {tour.activityId && (
-          <Badge variant="accent" className="absolute left-3 top-3 bg-card/90 backdrop-blur">
-            Book Instantly
-          </Badge>
-        )}
       </div>
       <div className="flex flex-1 flex-col gap-2.5 p-5">
         <h3 className="text-lg font-semibold leading-snug">{tour.name}</h3>
         <p className="flex-1 text-pretty text-sm text-muted-foreground">{tour.description}</p>
-        <Button
-          type="button"
-          data-yetti-activity={tour.activityId ?? ""}
-          className="mt-2 w-full"
-        >
-          <CalendarCheck className="size-4" />
-          Book Now
-        </Button>
+        <div className="mt-2 flex gap-2">
+          <Button asChild className="flex-1">
+            <a
+              href={`https://wa.me/${whatsappNumber}?text=${whatsappText}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <WhatsAppIcon className="size-4" />
+              WhatsApp
+            </a>
+          </Button>
+          <Button asChild variant="outline" className="flex-1">
+            <a href={`mailto:${brand.social.email}?subject=${emailSubject}&body=${emailBody}`}>
+              <Mail className="size-4" />
+              Email
+            </a>
+          </Button>
+        </div>
       </div>
     </div>
   );

@@ -1,11 +1,15 @@
-import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import { brand } from "@/brand.config";
+import { WhatsAppIcon } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/magic/reveal";
 import { formatPhone } from "@/lib/format-phone";
+
+const whatsappHref = `https://wa.me/${brand.contact.whatsapp.replace(/[^\d]/g, "")}?text=${encodeURIComponent(
+  `Hi ${brand.name}, I have a question.`
+)}`;
 
 export function Hero() {
   return (
@@ -22,16 +26,16 @@ export function Hero() {
           </Reveal>
           <Reveal delay={0.14}>
             <p className="mt-6 max-w-lg text-pretty text-lg text-muted-foreground">
-              Providing safe fun tours in all of Jamaica. Taking you to hidden local gems,
-              sites, beaches, and rest.
+              Providing safe, fun private tours in all of Jamaica &mdash; just you and yours,
+              never a shared group. Taking you to hidden local gems, sites, beaches, and rest.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg">
-                <Link href="/contact-us">
-                  Book Now <ArrowRight className="size-4" />
-                </Link>
+                <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
+                  <WhatsAppIcon className="size-4" /> WhatsApp Us
+                </a>
               </Button>
               <Button asChild size="lg" variant="outline">
                 <a href={`tel:${brand.contact.phone}`}>

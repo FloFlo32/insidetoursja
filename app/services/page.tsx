@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Compass, Plane, Sparkles, CalendarRange } from "lucide-react";
+import { ArrowRight, Compass, Plane, Sparkles } from "lucide-react";
 import { brand } from "@/brand.config";
+import { WhatsAppIcon } from "@/components/icons";
 import { Navbar } from "@/components/sections/navbar";
 import { Footer } from "@/components/sections/footer";
 import { PageHero } from "@/components/sections/page-hero";
@@ -10,6 +11,10 @@ import { Badge } from "@/components/ui/badge";
 import { Reveal, RevealGroup, RevealItem } from "@/components/magic/reveal";
 import { ImageCard } from "@/components/magic/image-card";
 import { cn } from "@/lib/utils";
+
+const whatsappHref = `https://wa.me/${brand.contact.whatsapp.replace(/[^\d]/g, "")}?text=${encodeURIComponent(
+  `Hi ${brand.name}, I have a question.`
+)}`;
 
 export const metadata: Metadata = {
   title: "Services",
@@ -118,9 +123,9 @@ export default function ServicesPage() {
                 yours to enjoy 2 or 3 tours in one exciting day.
               </p>
               <Button asChild size="lg" className="mt-7">
-                <Link href="/contact-us">
-                  Book Now <ArrowRight className="size-4" />
-                </Link>
+                <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
+                  <WhatsAppIcon className="size-4" /> WhatsApp Us
+                </a>
               </Button>
             </Reveal>
             <Reveal delay={0.08}>

@@ -1,11 +1,16 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Phone, Image as ImageIcon, CreditCard } from "lucide-react";
+import { CheckCircle2, Phone, Image as ImageIcon, CreditCard } from "lucide-react";
 import { brand } from "@/brand.config";
+import { WhatsAppIcon } from "@/components/icons";
 import { PageHero } from "@/components/sections/page-hero";
 import { Button } from "@/components/ui/button";
 import { Reveal, RevealGroup, RevealItem } from "@/components/magic/reveal";
 import { ImageCard } from "@/components/magic/image-card";
 import { formatPhone } from "@/lib/format-phone";
+
+const whatsappHref = `https://wa.me/${brand.contact.whatsapp.replace(/[^\d]/g, "")}?text=${encodeURIComponent(
+  `Hi ${brand.name}, I have a question.`
+)}`;
 
 const inclusions = [
   "Air-conditioned vehicle",
@@ -67,9 +72,9 @@ export function AirportTransferDetail({
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg">
-                <Link href="/contact-us">
-                  Inquire / Book Now <ArrowRight className="size-4" />
-                </Link>
+                <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
+                  <WhatsAppIcon className="size-4" /> WhatsApp Us
+                </a>
               </Button>
               <Button asChild size="lg" variant="outline">
                 <a href={`tel:${brand.contact.phone}`}>

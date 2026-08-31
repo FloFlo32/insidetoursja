@@ -23,8 +23,9 @@ Tour, Konoko Falls Tour, Negril's Day Out, Ricks Cafe Tour, White River Bamboo R
 Tour, ATVs Adventure Tour, Dune Buggy Tour, Fishing Trips, Local Day Out, Pelican Bar Tour,
 Scotchies Jerk Centre, White River Tubing Tour, Zipline Over Dunn's River Falls Tour, Black
 River Safari Tour, Dunn's River Falls Tour, Horseback Riding in the Ocean, Luminous Lagoon
-Tour, Rafting on the Martha Brae Tour, The Blue Hole Tour, YS Falls Tour. No fixed prices
-are published; guests should message the team for rates.
+Tour, Rafting on the Martha Brae Tour, The Blue Hole Tour, YS Falls Tour. All tours are
+private (just the guest's own group, never a shared/public departure). No fixed prices are
+published; guests should message the team on WhatsApp or email for rates.
 
 ## Airport transfers
 Montego Bay Airport Transfers and Kingston Airport Transfers both include: air-conditioned
@@ -32,10 +33,12 @@ vehicle, complimentary drink, professional driver, all fees and taxes, and priva
 transportation. Drivers wait outside the terminal exit with a company sign.
 
 ## Booking
-Guests are encouraged to private message Inside Tours Jamaica on Facebook or Instagram, or
-call/email, to learn more about transfer and excursion packages and reserve a date.
+There is no public/instant checkout. Guests enquire directly via WhatsApp or email (the
+preferred channels), or by phone, to learn more about transfer and excursion packages and
+reserve a date. All tours are private and quoted per group.
 
 ## Contact
+- WhatsApp: +1 876-566-8156
 - Phone: +1 876-566-8156
 - Email: insidetoursjamaica@gmail.com
 - Location: Montego Bay, Jamaica
@@ -43,15 +46,18 @@ call/email, to learn more about transfer and excursion packages and reserve a da
 - Facebook: insidetourja · Instagram: insidetours.jamaica
 
 ## FAQ
-- Q: What tours do you offer? A: Over 20 tours and excursions across Jamaica, including
-  Dunn's River Falls, YS Falls, Black River Safari, Bob Marley Nine Mile, Appleton Estate
-  Rum Tour, Negril's Day Out, and more. See the Tours & Excursions page for the full list.
+- Q: What tours do you offer? A: Over 20 private tours and excursions across Jamaica,
+  including Dunn's River Falls, YS Falls, Black River Safari, Bob Marley Nine Mile,
+  Appleton Estate Rum Tour, Negril's Day Out, and more. See the Tours & Excursions page for
+  the full list.
+- Q: Are the tours private or group tours? A: All tours are private — just the guest's own
+  group, never combined with other travelers.
 - Q: Do you offer airport transfers? A: Yes, private airport transfers from both Montego
   Bay (Sangster International) and Kingston (Norman Manley International), including a
   complimentary drink and professional driver.
 - Q: How much do tours cost? A: Pricing isn't published online. Message Inside Tours
-  Jamaica on Facebook/Instagram, call +1 876-566-8156, or email
-  insidetoursjamaica@gmail.com for rates and availability.
+  Jamaica on WhatsApp at +1 876-566-8156, email insidetoursjamaica@gmail.com, or call for
+  rates and availability.
 - Q: Can I combine multiple tours in one day? A: Yes, customized trips let you enjoy 2 or 3
   tours in one exciting day.
 - Q: Where are you located? A: Montego Bay, Jamaica. Open every day, 8am to 9pm.

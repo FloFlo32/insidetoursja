@@ -9,8 +9,12 @@ import { Map } from "@/components/sections/map";
 import { ContactForm } from "@/components/sections/contact-form";
 import { Button } from "@/components/ui/button";
 import { Reveal, RevealGroup, RevealItem } from "@/components/magic/reveal";
-import { FacebookIcon, InstagramIcon } from "@/components/icons";
+import { FacebookIcon, InstagramIcon, WhatsAppIcon } from "@/components/icons";
 import { formatPhone } from "@/lib/format-phone";
+
+const whatsappHref = `https://wa.me/${brand.contact.whatsapp.replace(/[^\d]/g, "")}?text=${encodeURIComponent(
+  `Hi ${brand.name}, I have a question.`
+)}`;
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -18,6 +22,13 @@ export const metadata: Metadata = {
 };
 
 const infoCards = [
+  {
+    icon: WhatsAppIcon,
+    label: "WhatsApp us",
+    value: formatPhone(brand.contact.phone),
+    href: whatsappHref,
+    external: true,
+  },
   {
     icon: Phone,
     label: "Call us",
@@ -55,7 +66,7 @@ export default function ContactUsPage() {
           title="Let's plan your visit"
           description="Private message us using any of these links here to learn more about our transfers and excursions packages, or send us a message below."
           image="/ingested/insidetoursja/img-089.webp"
-          imageAlt="Guests ready for their Inside Tours Jamaica adventure"
+          imageAlt="A guest swimming with a dolphin on an Inside Tours Jamaica excursion"
         />
 
         <section className="container-px mx-auto max-w-7xl py-20 sm:py-28">

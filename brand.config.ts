@@ -67,7 +67,7 @@ export const brand = {
    * - address + mapQuery: set them and the <Map> section renders a pin + embedded map.
    */
   contact: {
-    whatsapp: "",
+    whatsapp: "18765668156",
     phone: "+18765668156",
     address: "Montego Bay, Jamaica",
     mapQuery: "Montego Bay, Jamaica",

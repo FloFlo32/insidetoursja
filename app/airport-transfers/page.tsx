@@ -114,7 +114,7 @@ export default function AirportTransfersPage() {
               <ImageCard
                 src="/ingested/insidetoursja/img-028.webp"
                 alt="A group of guests posing together after an Inside Tours Jamaica excursion"
-                title="Book Now"
+                title="Get in Touch"
                 description="Private message us using any of these links here to learn more about our transfers and excursions packages."
                 href="/contact-us"
                 ratio="aspect-[4/3]"

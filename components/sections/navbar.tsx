@@ -4,15 +4,19 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Phone, CalendarCheck } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, Mail } from "lucide-react";
 import { brand } from "@/brand.config";
 import { navItems } from "@/lib/nav-items";
 import { formatPhone } from "@/lib/format-phone";
-import { tours } from "@/lib/tours";
+import { WhatsAppIcon } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const bookableTours = tours.filter((t) => t.activityId);
+const whatsappNumber = brand.contact.whatsapp.replace(/[^\d]/g, "");
+const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+  `Hi ${brand.name}, I have a question.`
+)}`;
+const emailHref = `mailto:${brand.social.email}`;
 
 export function Navbar() {
   const [scrolled, setScrolled] = React.useState(false);
@@ -148,12 +152,12 @@ export function Navbar() {
               aria-expanded={bookMenuOpen}
               aria-haspopup="true"
             >
-              Book Now
+              Inquire Now
               <ChevronDown className={cn("size-3.5 transition-transform", bookMenuOpen && "rotate-180")} />
             </Button>
             <div
               className={cn(
-                "absolute right-0 top-full w-80 pt-2 transition-all duration-150",
+                "absolute right-0 top-full w-72 pt-2 transition-all duration-150",
                 bookMenuOpen
                   ? "pointer-events-auto translate-y-0 opacity-100"
                   : "pointer-events-none -translate-y-1 opacity-0"
@@ -161,27 +165,33 @@ export function Navbar() {
             >
               <div className="overflow-hidden rounded-2xl border border-border bg-card p-2 shadow-xl shadow-black/10">
                 <p className="px-3 pb-1.5 pt-2 text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground">
-                  Book instantly
+                  All tours are private
                 </p>
-                {bookableTours.map((t) => (
-                  <button
-                    key={t.activityId}
-                    type="button"
-                    data-yetti-activity={t.activityId}
-                    onClick={() => setBookMenuOpen(false)}
-                    className="flex w-full items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-left text-sm font-medium text-foreground/85 transition-colors hover:bg-accent hover:text-foreground"
-                  >
-                    {t.name}
-                    <CalendarCheck className="size-4 shrink-0 text-primary" />
-                  </button>
-                ))}
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setBookMenuOpen(false)}
+                  className="flex w-full items-center gap-2.5 rounded-xl px-3 py-2.5 text-left text-sm font-medium text-foreground/85 transition-colors hover:bg-accent hover:text-foreground"
+                >
+                  <WhatsAppIcon className="size-4 shrink-0 text-primary" />
+                  WhatsApp Us
+                </a>
+                <a
+                  href={emailHref}
+                  onClick={() => setBookMenuOpen(false)}
+                  className="flex w-full items-center gap-2.5 rounded-xl px-3 py-2.5 text-left text-sm font-medium text-foreground/85 transition-colors hover:bg-accent hover:text-foreground"
+                >
+                  <Mail className="size-4 shrink-0 text-primary" />
+                  Email Us
+                </a>
                 <div className="mt-1 border-t border-border pt-1">
                   <Link
                     href="/contact-us"
                     onClick={() => setBookMenuOpen(false)}
                     className="block rounded-xl px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
                   >
-                    Ask about another tour
+                    Send us a message
                   </Link>
                 </div>
               </div>
@@ -236,26 +246,32 @@ export function Navbar() {
             </a>
             <div className="mt-3 rounded-2xl border border-white/10 p-3">
               <p className="px-1 pb-2 text-xs font-semibold uppercase tracking-[0.15em] text-white/50">
-                Book instantly
+                All tours are private
               </p>
               <div className="flex flex-col gap-1">
-                {bookableTours.map((t) => (
-                  <button
-                    key={t.activityId}
-                    type="button"
-                    data-yetti-activity={t.activityId}
-                    onClick={() => setOpen(false)}
-                    className="flex w-full items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-left text-sm font-medium text-white/85 transition-colors hover:bg-white/10"
-                  >
-                    {t.name}
-                    <CalendarCheck className="size-4 shrink-0 text-primary" />
-                  </button>
-                ))}
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                  className="flex w-full items-center gap-2.5 rounded-xl px-3 py-2.5 text-left text-sm font-medium text-white/85 transition-colors hover:bg-white/10"
+                >
+                  <WhatsAppIcon className="size-4 shrink-0 text-primary" />
+                  WhatsApp Us
+                </a>
+                <a
+                  href={emailHref}
+                  onClick={() => setOpen(false)}
+                  className="flex w-full items-center gap-2.5 rounded-xl px-3 py-2.5 text-left text-sm font-medium text-white/85 transition-colors hover:bg-white/10"
+                >
+                  <Mail className="size-4 shrink-0 text-primary" />
+                  Email Us
+                </a>
               </div>
             </div>
             <Button asChild className="mt-3">
               <Link href="/contact-us" onClick={() => setOpen(false)}>
-                Ask About Another Tour
+                Send Us a Message
               </Link>
             </Button>
           </div>

@@ -9,7 +9,7 @@ const rows = [
     body: "When you say Inside Tours Jamaica you can always think of local, beauty, fun. You are family, not a guest, from the moment we pick you up.",
     icon: Beer,
     image: "/stock/beach-toast-friends.webp",
-    alt: "Friends toasting with cold drinks on the beach",
+    alt: "Guests holding a Jamaican flag beside a river waterfall",
     reverse: false,
   },
   {
@@ -18,7 +18,7 @@ const rows = [
     body: "We now offer photography packages so you can enjoy your day hassle free while we capture all your best moments on camera with our amazing lens. Inside Tours Jamaica, it's more fun with us.",
     icon: Camera,
     image: "/stock/beach-photographer.webp",
-    alt: "A photographer capturing a guest's best moments on a Jamaica tour",
+    alt: "Guests posing together at a waterfall on a Jamaica tour",
     reverse: true,
   },
 ];

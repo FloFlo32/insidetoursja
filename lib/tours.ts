@@ -1,16 +1,15 @@
-export type Tour = { name: string; description: string; image: string; activityId?: string; imagePosition?: "center" | "top" };
+export type Tour = { name: string; description: string; image: string; imagePosition?: "center" | "top" };
 
 /**
  * The 22 tours from insidetoursja.com/tours-excursions/, each paired with its
  * real photo (reconstructed from the live DOM: one <img class="et-waypoint">
- * immediately follows each tour heading, in order). The three tours with a
- * `activityId` are wired to the Yetti booking widget and are sorted first so
- * guests can book them directly; the rest keep the standard enquiry link.
+ * immediately follows each tour heading, in order). All tours are private and
+ * quote-on-request — guests enquire via WhatsApp or email (see TourCard).
  */
 export const tours: Tour[] = [
-  { name: "Dunns River Falls Catamaran Cruise Tour", description: "A dynamic tour of our famous falls is a must!, enjoy snorkeling, and live music with drinks on board as your cruise on the Caribbean ocean.", image: "/ingested/insidetoursja/img-045.webp", activityId: "e064a5a4-a62f-4e9b-b2ce-a1fd7629d3c3" },
-  { name: "White River Bamboo Rafting Tour", description: "The no. 1 rafting attraction which lasts for 45 minutes to an hour is an experience you would not want to miss!, enjoy the exotic surroundings and the colorful birds as you sit back, relax and enjoy the Caribbean sun as the captain navigates the vibrant and rich river while you raft.", image: "/ingested/insidetoursja/img-049.webp", activityId: "b815fe4f-1846-447e-8bd0-a712aadb7d3c" },
-  { name: "White River Tubing Tour", description: "A Fresh, cool river surrounded by tropical scenery is definitely the place to be with the entire family! The tubing which lasts between 45 minutes to an hour is a sight you will never forget with the lush green vegetation on every side you can also have a swim and enjoy the cool river water.", image: "/ingested/insidetoursja/img-056.webp", activityId: "7b5adb04-dc59-4a4e-aee7-0e04fdfad605" },
+  { name: "Dunns River Falls Catamaran Cruise Tour", description: "A dynamic tour of our famous falls is a must!, enjoy snorkeling, and live music with drinks on board as your cruise on the Caribbean ocean.", image: "/ingested/insidetoursja/img-045.webp" },
+  { name: "White River Bamboo Rafting Tour", description: "The no. 1 rafting attraction which lasts for 45 minutes to an hour is an experience you would not want to miss!, enjoy the exotic surroundings and the colorful birds as you sit back, relax and enjoy the Caribbean sun as the captain navigates the vibrant and rich river while you raft.", image: "/ingested/insidetoursja/img-049.webp" },
+  { name: "White River Tubing Tour", description: "A Fresh, cool river surrounded by tropical scenery is definitely the place to be with the entire family! The tubing which lasts between 45 minutes to an hour is a sight you will never forget with the lush green vegetation on every side you can also have a swim and enjoy the cool river water.", image: "/ingested/insidetoursja/img-056.webp" },
   { name: "Appleton Estate Rum Tour", description: "Its a fun and historical excursion of how one of our finest rum is made from start to finish, come and participate in exciting activities, and getting to taste the different ages of rum.", image: "/ingested/insidetoursja/img-043.webp" },
   { name: "Bob Marley Nine Mile Tour", description: "A historical tour about a legend, the birthplace of our king of reggae, Bob Marley, come and experience a tour of where he lived and grew up as a child, and get to view his guitars, photographs, and awards! where it's all about a king.", image: "/ingested/insidetoursja/img-nine-mile-legend.webp" },
   { name: "Konoko Falls Tour", description: "A place of nature and leisure with friends and families, you'll meet indigenous birds and animals, take a tour through the beautiful gardens, climb the falls and take a swim in the cool and refreshing water.", image: "/ingested/insidetoursja/img-046.webp" },
