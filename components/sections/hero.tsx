@@ -50,8 +50,8 @@ export function Hero() {
           <div className="relative grid grid-cols-[1.3fr_1fr] gap-4">
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-border shadow-2xl shadow-primary/15">
               <Image
-                src="/ingested/insidetoursja/img-057.webp"
-                alt="A guest zip-lining through the Jamaican rainforest canopy"
+                src="/ingested/insidetoursja/img-hero-dock-sunset.webp"
+                alt="Guests and their guide on a dock at sunset during an Inside Tours Jamaica excursion"
                 fill
                 priority
                 sizes="(max-width: 1024px) 60vw, 32vw"
