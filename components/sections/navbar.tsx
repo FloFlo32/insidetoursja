@@ -214,74 +214,113 @@ export function Navbar() {
         </div>
       </nav>
 
-      {open && (
-        <div className="border-t border-white/10 bg-[oklch(0.16_0.018_150)] xl:hidden">
-          <div className="container-px mx-auto flex max-w-7xl flex-col gap-1 py-4">
-            {navItems.map((item) => (
-              <div key={item.href}>
-                <Link
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className="block rounded-xl px-3.5 py-3 text-sm font-medium text-white/85 hover:bg-white/10"
-                >
-                  {item.label}
-                </Link>
-                {item.children && (
-                  <div className="ml-3 flex flex-col border-l border-white/10 pl-3">
-                    {item.children.map((c) => (
-                      <Link
-                        key={c.href}
-                        href={c.href}
-                        onClick={() => setOpen(false)}
-                        className="rounded-lg px-3 py-2.5 text-sm text-white/60 hover:bg-white/10 hover:text-white"
-                      >
-                        {c.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-            <a
-              href={`tel:${brand.contact.phone}`}
-              className="mt-2 flex items-center gap-2 rounded-xl px-3.5 py-3 text-sm font-medium text-white/85 hover:bg-white/10"
+      {/* Mobile drawer */}
+      <div className={cn("fixed inset-0 z-40 xl:hidden", open ? "pointer-events-auto" : "pointer-events-none")}>
+        <div
+          onClick={() => setOpen(false)}
+          aria-hidden="true"
+          className={cn(
+            "absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300",
+            open ? "opacity-100" : "opacity-0"
+          )}
+        />
+        <div
+          className={cn(
+            "absolute inset-y-0 right-0 flex w-[86%] max-w-sm flex-col bg-[oklch(0.16_0.018_150)] shadow-2xl transition-transform duration-300 ease-out",
+            open ? "translate-x-0" : "translate-x-full"
+          )}
+        >
+          <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
+            <span className="font-display text-base font-bold text-white">{brand.name}</span>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-white hover:bg-white/10 hover:text-white"
+              aria-label="Close menu"
+              onClick={() => setOpen(false)}
             >
-              <Phone className="size-4 text-primary" />
-              {formatPhone(brand.contact.phone)}
-            </a>
-            <div className="mt-3 rounded-2xl border border-white/10 p-3">
-              <p className="px-1 pb-2 text-xs font-semibold uppercase tracking-[0.15em] text-white/50">
-                All tours are private
-              </p>
-              <div className="flex flex-col gap-1">
-                <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setOpen(false)}
-                  className="flex w-full items-center gap-2.5 rounded-xl px-3 py-2.5 text-left text-sm font-medium text-white/85 transition-colors hover:bg-white/10"
-                >
-                  <WhatsAppIcon className="size-4 shrink-0 text-primary" />
-                  WhatsApp Us
-                </a>
-                <a
-                  href={emailHref}
-                  onClick={() => setOpen(false)}
-                  className="flex w-full items-center gap-2.5 rounded-xl px-3 py-2.5 text-left text-sm font-medium text-white/85 transition-colors hover:bg-white/10"
-                >
-                  <Mail className="size-4 shrink-0 text-primary" />
-                  Email Us
-                </a>
-              </div>
-            </div>
-            <Button asChild className="mt-3">
-              <Link href="/contact-us" onClick={() => setOpen(false)}>
-                Send Us a Message
-              </Link>
+              <X className="size-5" />
             </Button>
           </div>
+
+          <div className="flex-1 overflow-y-auto px-5 py-5">
+            <nav className="flex flex-col gap-1">
+              {navItems.map((item) => (
+                <div key={item.href}>
+                  <Link
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className={cn(
+                      "block rounded-xl px-3.5 py-3 text-[15px] font-medium transition-colors",
+                      isActive(item.href)
+                        ? "bg-primary text-primary-foreground"
+                        : "text-white/85 hover:bg-white/10"
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                  {item.children && (
+                    <div className="ml-3 mt-0.5 flex flex-col gap-0.5 border-l border-white/10 pl-3">
+                      {item.children.map((c) => (
+                        <Link
+                          key={c.href}
+                          href={c.href}
+                          onClick={() => setOpen(false)}
+                          className="rounded-lg px-3 py-2 text-sm text-white/55 transition-colors hover:bg-white/10 hover:text-white"
+                        >
+                          {c.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </nav>
+
+            <div className="my-5 border-t border-white/10" />
+
+            <p className="px-1 pb-2.5 text-xs font-semibold uppercase tracking-[0.15em] text-white/40">
+              Get in touch — all tours are private
+            </p>
+            <div className="flex flex-col gap-2">
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+                className="flex items-center gap-2.5 rounded-xl bg-[#25D366]/15 px-3.5 py-3 text-sm font-medium text-white transition-colors hover:bg-[#25D366]/25"
+              >
+                <WhatsAppIcon className="size-4 shrink-0 text-[#25D366]" />
+                WhatsApp Us
+              </a>
+              <a
+                href={emailHref}
+                onClick={() => setOpen(false)}
+                className="flex items-center gap-2.5 rounded-xl border border-white/10 px-3.5 py-3 text-sm font-medium text-white/85 transition-colors hover:bg-white/10"
+              >
+                <Mail className="size-4 shrink-0 text-primary" />
+                Email Us
+              </a>
+              <a
+                href={`tel:${brand.contact.phone}`}
+                onClick={() => setOpen(false)}
+                className="flex items-center gap-2.5 rounded-xl border border-white/10 px-3.5 py-3 text-sm font-medium text-white/85 transition-colors hover:bg-white/10"
+              >
+                <Phone className="size-4 shrink-0 text-primary" />
+                {formatPhone(brand.contact.phone)}
+              </a>
+            </div>
+
+            <Link
+              href="/contact-us"
+              onClick={() => setOpen(false)}
+              className="mt-4 block rounded-xl px-3.5 py-2.5 text-center text-sm font-medium text-white/50 transition-colors hover:text-white"
+            >
+              Or send us a message online →
+            </Link>
+          </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }
