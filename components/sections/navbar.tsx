@@ -157,7 +157,7 @@ export function Navbar() {
               aria-expanded={bookMenuOpen}
               aria-haspopup="true"
             >
-              Inquire Now
+              Book Now
               <ChevronDown className={cn("size-3.5 transition-transform", bookMenuOpen && "rotate-180")} />
             </Button>
             <div
@@ -310,14 +310,6 @@ export function Navbar() {
                 {formatPhone(brand.contact.phone)}
               </a>
             </div>
-
-            <Link
-              href="/contact-us"
-              onClick={() => setOpen(false)}
-              className="mt-4 block rounded-xl px-3.5 py-2.5 text-center text-sm font-medium text-white/50 transition-colors hover:text-white"
-            >
-              Or send us a message online →
-            </Link>
           </div>
         </div>
       </div>
