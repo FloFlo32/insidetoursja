@@ -75,7 +75,7 @@ export function FaqWidget() {
         aria-label={open ? "Close assistant" : "Open FAQ assistant"}
         aria-expanded={open}
         className={cn(
-          "fixed bottom-5 right-5 z-50 grid size-14 place-items-center rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30 transition-transform duration-200 hover:scale-105 active:scale-95 motion-reduce:transition-none",
+          "floating-widget fixed bottom-5 right-5 z-50 grid size-14 place-items-center rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30 transition-transform duration-200 hover:scale-105 active:scale-95 motion-reduce:transition-none",
           open && "rotate-90"
         )}
       >
@@ -88,7 +88,7 @@ export function FaqWidget() {
         aria-label={`${brand.name} assistant`}
         aria-hidden={!open}
         className={cn(
-          "fixed bottom-24 right-5 z-50 flex w-[min(24rem,calc(100vw-2.5rem))] flex-col overflow-hidden rounded-2xl border border-border bg-popover text-popover-foreground shadow-2xl shadow-primary/10 transition-all duration-200 motion-reduce:transition-none",
+          "floating-widget fixed bottom-24 right-5 z-50 flex w-[min(24rem,calc(100vw-2.5rem))] flex-col overflow-hidden rounded-2xl border border-border bg-popover text-popover-foreground shadow-2xl shadow-primary/10 transition-all duration-200 motion-reduce:transition-none",
           open
             ? "pointer-events-auto translate-y-0 opacity-100"
             : "pointer-events-none translate-y-3 opacity-0"

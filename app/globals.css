@@ -189,6 +189,13 @@
   padding-inline: 1.5rem;
 }
 
+/* Hide floating widgets while the mobile nav menu is open — otherwise they sit
+   on top of (and block) the menu's own content, since both are fixed-position
+   with the same stacking layer. Toggled by Navbar via a body class. */
+body.mobile-nav-open .floating-widget {
+  display: none;
+}
+
 /* Gradient text — allowed and encouraged here. Use to punctuate, not everywhere. */
 @utility text-gradient {
   background: linear-gradient(

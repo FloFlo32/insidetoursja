@@ -39,6 +39,11 @@ export function Navbar() {
   }, [pathname]);
 
   React.useEffect(() => {
+    document.body.classList.toggle("mobile-nav-open", open);
+    return () => document.body.classList.remove("mobile-nav-open");
+  }, [open]);
+
+  React.useEffect(() => {
     if (!bookMenuOpen) return;
     const onDocClick = (e: MouseEvent) => {
       if (bookMenuRef.current && !bookMenuRef.current.contains(e.target as Node)) {
